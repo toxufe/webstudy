@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    
+    <h1>import map 学习</h1>
+    <div id="app">
+
+        <div ref="msg">{{ message }}</div>
+
+        <button @click="change">改变我</button>
+    </div>
+    <script type="importmap">
+        {
+            "imports":{
+                "vue":"./node_modules/vue/dist/vue.esm-browser.js"
+            }
+        }
+        
+    </script>
+
+    <script type="module">
+        import { createApp, ref } from 'vue';
+        createApp({
+            setup() {
+                const message = ref('Hello Vue!')
+                const msg = ref();
+                const change = ()=>{
+                    msg.value.style.color="red";
+                    msg.value.style.fontSize="40px";
+                }
+                return {
+                    message,
+                    change,
+                    msg
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

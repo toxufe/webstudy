@@ -10,7 +10,7 @@
 
 <body>
 
-    
+
     <h1>import map 学习</h1>
     <div id="app">
 
@@ -28,22 +28,42 @@
     </script>
 
     <script type="module">
-        import { createApp, ref } from 'vue';
-        createApp({
-            setup() {
-                const message = ref('Hello Vue!')
-                const msg = ref();
-                const change = ()=>{
-                    msg.value.style.color="red";
-                    msg.value.style.fontSize="40px";
+    
+        Promise.all([import('vue')]).then(([Vue]) => {
+            const { createApp,ref } = Vue;
+            createApp({
+                setup() {
+                    const message = ref('Hello Vue!')
+                    const msg = ref();
+                    const change = () => {
+                        msg.value.style.color = "red";
+                        msg.value.style.fontSize = "40px";
+                    }
+                    return {
+                        message,
+                        change,
+                        msg
+                    }
                 }
-                return {
-                    message,
-                    change,
-                    msg
-                }
-            }
-        }).mount('#app')
+            }).mount('#app')
+        });
+
+        // import { createApp, ref } from 'vue';
+        // createApp({
+        //     setup() {
+        //         const message = ref('Hello Vue!')
+        //         const msg = ref();
+        //         const change = ()=>{
+        //             msg.value.style.color="red";
+        //             msg.value.style.fontSize="40px";
+        //         }
+        //         return {
+        //             message,
+        //             change,
+        //             msg
+        //         }
+        //     }
+        // }).mount('#app')
     </script>
 </body>
 

@@ -28,7 +28,7 @@
     </script>
 
     <script type="module">
-    
+        // 并发加载
         Promise.all([import('vue')]).then(([Vue]) => {
             const { createApp,ref } = Vue;
             createApp({
@@ -48,6 +48,7 @@
             }).mount('#app')
         });
 
+        // 其他加载
         // import { createApp, ref } from 'vue';
         // createApp({
         //     setup() {

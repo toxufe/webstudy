@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dll 缓存技术</title>
+    <!-- <script src="./dll缓存技术demo/dist/bundle.js"></script> -->
+</head>
+<body>
+    <h1>dll 缓存技术</h1>
+    <div>
+        动态链接库，dynamic link library，缩写为DLL，是一种微软公司开发的动态链接库文件格式，它是一种可以被多个程序同时使用的代码和数据的集合。DLL文件的扩展名是.dll，它们通常包含可执行代码和数据，用于扩展应用程序的功能，或者为应用程序提供一些特定的功能。
+
+    </div>
+    <dl>
+        <dt>作用</dt>
+        <dd>共享作用</dd>
+    </dl>
+
+    <div>
+        DllPlugin 主要用于将第三方依赖库单独打包，以避免每次构建时都重新编译这些依赖库。
+    </div>
+    <dl>
+        <dt>没有做dll缓存</dt>
+        <dd>打包时间：webpack 5.91.0 compiled successfully in 506 ms</dd>
+<hr>
+        <dt>做了dll缓存</dt>
+        <dd>打包时间;webpack 5.91.0 compiled successfully in 117 ms</dd>
+    </dl>
+</body>
+</html>

@@ -1,9 +1,8 @@
-## 2024年04月11日 
+## 学习笔记
 ### importmap study
 ### 函数的二义性
 箭头函数和普通函数的区别，消除函数的二义性。
 
-## 2024年04月12日 
 ### 性能优化
 #### dll
 
@@ -28,4 +27,21 @@ super() // 父类的prototype.constructor.call
 
 // 静态方法 this 执行的是类本身 static修饰的方法和属性
 ```
+
+#### 枚举
+- 数字枚举 - 从0开始递增
+```
+enum Color {
+    Red,
+    Green,
+    Blue
+}
+
+console.log(Color.Red); // 0
+console.log(Color.Green); // 1
+console.log(Color.Blue); // 2
+```
+- 增长枚举
+- 自定义枚举
+
 

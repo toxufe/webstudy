@@ -45,3 +45,15 @@ console.log(Color.Blue); // 2
 - 自定义枚举
 
 
+#### 类型推断和类型声明
+```
+// any unknow 顶级类型
+// Object
+// Number String Boolean
+// number string boolean 
+// 1 'test' true
+// never
+```
+
+
+

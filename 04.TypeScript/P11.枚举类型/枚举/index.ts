@@ -37,3 +37,18 @@ console.log(Color2.Red); // red
 console.log(Color2.Green); // 1
 console.log(Color2.Blue); // 2
 
+
+// 接口枚举
+interface A  {
+    a:Color.Red
+}
+
+let obj:A = {
+    // a: Color1.Red
+    a: 0 // 数字枚举可直接定义 字符串枚举不可以 必须使用上行的形式。
+}
+console.log('obj: ', obj);
+
+
+// 常量枚举 - const枚举
+

@@ -55,5 +55,17 @@ console.log(Color.Blue); // 2
 // never
 ```
 
+#### 泛型
+TypeScript has two modes.
+
+A project-builder mode (when tsc is invoked with no arguments)
+A compile-mode (when tsc is invoked with any arguments) which does not read from the configuration file tsconfig.json
+If that sounds confusing, it's even more confusing when you account for
+
+the flag for the compiler-mode to accept a configuration file is called --project
+inside the project-builder's configuration file there the pragma is called "compilerOptions"
+the compiler-mode and the project-builder mode accept the same configuration file
+Anyway, the problem here was that TypeScript was simply ignoring the configuration file in the current working directory that I was running it in.
+
 
 

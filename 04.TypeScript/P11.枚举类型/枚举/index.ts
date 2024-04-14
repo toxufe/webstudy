@@ -51,4 +51,23 @@ console.log('obj: ', obj);
 
 
 // 常量枚举 - const枚举
+const enum Types {
+    success,
+    fail
+}
+let code = 0;
+if(code === Types.success){
+    console.log('success');
+}
 
+// 反向映射 字符串无法进行反射
+enum Types1 {
+    success,
+    fail
+}
+
+let success:number = Types1.success;
+let key = Types1[success];
+
+console.log('success: ', success); // 0
+console.log('key: ', key); // success

@@ -134,7 +134,7 @@ Anyway, the problem here was that TypeScript was simply ignoring the configurati
         "exclude":[
             "demo.ts"
         ],
-        // 指定那些文件使用该配置，属于手动一个个指定文件
+        // 指定那些文件使用该配置，属于手动一个个指定文件 只能指定文件不能指定文件夹
         "files":[
             "index.ts"
         ]

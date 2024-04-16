@@ -28,4 +28,7 @@ console.log('c: ', c);
 let d = Object.assign(a,b);
 console.log('d: ', d);
 
-// c. 深拷贝
+// c. 深拷贝  
+let c1 = structuredClone(a)
+
+// 类的混入

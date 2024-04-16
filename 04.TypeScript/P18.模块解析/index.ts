@@ -21,7 +21,7 @@
 // console.log('api: ', api);
 
 // 5. 动态引入
-// import 只能在最上层使用
+// import 只能在最上层使用  掺杂到代码逻辑中 需要使用 动态引入
 if(true){
     import('./test').then(res=>{
         console.log('res: ', res);

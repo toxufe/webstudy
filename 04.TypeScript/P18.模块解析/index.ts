@@ -16,6 +16,10 @@
 // console.log('a1: ', xxx);
 
 
-// 查看导出的所有内容
-import * as api from './test';
-console.log('api: ', api);
+// 4. 查看导出的所有内容
+// import * as api from './test';
+// console.log('api: ', api);
+
+// 5. 动态引入
+// import 只能在最上层使用
+

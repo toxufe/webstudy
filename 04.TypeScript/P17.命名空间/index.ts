@@ -26,3 +26,42 @@ namespace B {
 }
 
 console.log('B.C.d: ', B.C.d);
+
+
+// 合并 支持namespace 同名的命名空间会 合并
+
+// 抽离 namespace 支持导出
+
+import { Test } from './test';
+console.log("导出", Test.a);
+
+// 简化 namespace 支持简化
+const a1 = Test.a
+console.log('a1: ', a1);
+const add = Test.add
+console.log('add: ', add(1, 1));
+
+// 命名空间的案例 使用场景
+// 跨端的项目 h5 ios、android 小程序
+namespace ios {
+    export const pushNotification = (title: string, type: number) => {
+        console.log('ios分享');
+    }
+}
+
+namespace android {
+    export const pushNotification = (title: string) => {
+        console.log('android分享');
+    }
+
+    export const callPhone = (phone: string) => {
+        console.log('android打电话');
+    }
+}
+
+namespace miniprogram {
+    export const pushNotification = (title: string) => {
+        console.log('小程序分享');
+    }
+    
+}

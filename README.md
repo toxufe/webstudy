@@ -161,3 +161,14 @@ nodejs 新版本也支持es6的模块化规范 ESM
 ![alt text](<imgs/image copy.png>)
 CMD是国产的
 
+
+#### 声明文件
+为第三方库,添加声明声明文件
+
+npm i --save-dev @types/express
+
+或者添加一个包含 `declare module 'express';` 的新声明(.d.ts)文件
+```js
+```
+
+

@@ -17,3 +17,12 @@ namespace A {
 
 console.log('A.b: ', A.b);
 
+
+// 支持namespace 嵌套
+namespace B {
+    export namespace C {
+        export let d = 4;
+    }
+}
+
+console.log('B.C.d: ', B.C.d);

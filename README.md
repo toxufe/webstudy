@@ -152,8 +152,12 @@ UMD 包含amd和commonjs
 UMD 浏览器script链接可以直接使用
 #### nodejs 
 nodejs 是基于commonjs 运行的
+nodejs 新版本也支持es6的模块化规范 ESM
 
 #### sourceMap
 
-
+#### 模块化引入
+![模块化引入](imgs/image.png)
+![alt text](<imgs/image copy.png>)
+CMD是国产的
 

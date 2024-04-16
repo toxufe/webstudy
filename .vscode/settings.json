@@ -5,5 +5,6 @@
         "activityBar.background": "#4E2014",
         "titleBar.activeBackground": "#6D2C1B",
         "titleBar.activeForeground": "#FDF9F8"
-    }
+    },
+    "gitdoc.enabled": true
 }

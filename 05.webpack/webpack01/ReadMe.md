@@ -30,3 +30,4 @@ npm i typescript -D
 ## 注意
 webpack 是基于nodejs环境的
 nodejs环境 是遵循commonjs规范的
+处理什么文件就要装什么loader

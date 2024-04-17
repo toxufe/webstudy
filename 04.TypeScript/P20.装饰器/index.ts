@@ -1,4 +1,5 @@
 import axios from "axios";
+import  "reflect-metadata";
 // 装饰器 Decorator
 // 本章有 7 个知识点
 // 修改配置文件

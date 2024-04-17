@@ -171,4 +171,9 @@ npm i --save-dev @types/express
 ```js
 ```
 
+#### 装饰器
+```
+npm install reflect-metadata
+```
+
 

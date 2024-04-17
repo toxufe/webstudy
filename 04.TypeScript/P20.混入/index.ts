@@ -65,13 +65,17 @@ function pluginMixins<T extends Constructor<App>>(Base:T) {
             super(...args);
             this.Logger = new Logger();
             this.Html = new Html();
-            
+
         }
 
         run(): void {
             super.run();
             this.Html.render();
-            this.Logger.log('run');
+            this.Logger.log('write log ----------');
         }
     }
 }   
+
+const mixins = pluginMixins(App);
+const app = new mixins();
+app.run();

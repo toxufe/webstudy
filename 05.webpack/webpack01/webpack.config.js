@@ -42,7 +42,7 @@ const config = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'scss-loader'],// 规则是从右向左解析 css-loader -> style-loader -> 插入 style 标签
+                use: ['style-loader', 'css-loader', 'sass-loader'],// 规则是从右向左解析 css-loader -> style-loader -> 插入 style 标签
             },
         ]
     },

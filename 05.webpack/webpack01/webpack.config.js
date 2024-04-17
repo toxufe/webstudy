@@ -38,7 +38,7 @@ const config = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader'],// 规则是从右向左解析
             }
         ]
     },

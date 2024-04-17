@@ -1,6 +1,7 @@
 const { Configuration } = require('webpack');
 const path = require('node:path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {VueLoaderPlugin} = require('vue-loader');
 
 // 通过注解的方式给对象提供声明
 /**
@@ -16,7 +17,8 @@ const config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'
-        })
+        }),
+        new VueLoaderPlugin()
     ],// webpack的插件都是class,所以都需要new
     module: { 
         rules: [

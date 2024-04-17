@@ -34,6 +34,10 @@ npm i vue
 ## vue 和 html 产生关联
 npm i html-webpack-plugin -D
 
+## CSS
+npm i css-loader -D
+npm i style-loader -D
+
 ## 注意
 webpack 是基于nodejs环境的
 nodejs环境 是遵循commonjs规范的

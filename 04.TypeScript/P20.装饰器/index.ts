@@ -50,7 +50,7 @@
 // class Http {
 // }
 // Base(Http);
-  
+
 
 // // 断言成 any 类型 即不检查属性错误
 // const http = new Http() as any;
@@ -58,13 +58,73 @@
 // http.run();
 
 
-// 5. 装饰器工厂 DecoratorFactory
+// 4. 方法装饰器 MethodDecorator
+const Base = (name:string) => {
+    // target 装饰器默认传入
+    // 什么是 函数柯里化  一个函数返回另一个函数 闭包
+    // 里边的函数去返回给装饰器调用
+    const fn: ClassDecorator = (target) => {
+        // console.log('target: ', target);
+        target.prototype.name = name;
+    }
 
-const Base:ClassDecorator = (target)=>{
-    console.log('target: ', target);
+    return fn;
+}  
 
+const Get = (url:string) => {
+    const fn: MethodDecorator = (target, key, descriptor) => {
+        console.log('target: ', target);
+        console.log('key: ', key);
+        console.log('descriptor: ', descriptor);
+    }
+
+    return fn;
 }
-@Base
+
+const Post = (url:string) => {
+    const fn: MethodDecorator = (target, key, descriptor) => {
+        console.log('target: ', target);
+        console.log('key: ', key);
+        console.log('descriptor: ', descriptor);
+    }
+
+    return fn;
+}
+
+
+@Base("huahua")
 class Http {
+    @Get('/getList')
+    getList (){
 
-}
+    }
+    @Post('/create')
+    create(){
+
+    }
+} 
+
+const http = new Http() as any;
+
+
+
+// 5. 装饰器工厂 DecoratorFactory 
+// 外边接受用户的自定义参数
+// const Base = (url:string) => {
+//     // target 装饰器默认传入
+//     // 什么是 函数柯里化  一个函数返回另一个函数 闭包
+//     // 里边的函数去返回给装饰器调用
+//     const fn: ClassDecorator = (target) => {
+//         console.log('target: ', target);
+//         target.prototype.url = url;
+//     }
+
+//     return fn;
+// }
+// @Base("m.zmyy.cn1111")
+// class Http {
+
+// } 
+
+// const http = new Http() as any;
+// console.log(http.url);

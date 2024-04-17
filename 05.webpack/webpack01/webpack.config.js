@@ -24,7 +24,12 @@ const config = {
         rules: [
             {
                 test: /\.ts$/,
-                use: 'ts-loader',// 处理ts文件
+                use: {
+                    loader: 'ts-loader',
+                    options: {
+                        appendTsSuffixTo: [/\.vue$/]
+                    }
+                }
             },
             {
                 test: /\.vue$/,

@@ -54,7 +54,12 @@ class App {
 
 type Constructor<T> = new (...args: any[]) => T;
 
+
 // 插件的混入函数
 function pluginMixins<T extends Constructor<App>>(Base:T) {
-    return class extends Base {}
-}
+    return class extends Base {
+        constructor(...args: any[]) {
+            super(...args);
+        }
+    }
+}   

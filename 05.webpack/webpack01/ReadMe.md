@@ -23,3 +23,5 @@ npm i webpack webpack-cli -D
 npm i webpack-dev-server -D
 
 ## 注意
+webpack 是基于nodejs环境的
+nodejs环境 是遵循commonjs规范的

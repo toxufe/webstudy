@@ -118,7 +118,7 @@ class Http {
     // 参数装饰器
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     getList (@Result() data: any) {
-        console.log('data: ', data.result.list);
+        // console.log('data: ', data.result.list);
 
     }
     // @Post('/create')

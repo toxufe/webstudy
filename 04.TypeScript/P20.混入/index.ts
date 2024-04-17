@@ -47,8 +47,17 @@ class Html {
 }
 
 class App {
+    // private Logger = new Logger();
+    // private Html = new Html();
+
+    // constructor() {
+    //     this.Logger = new Logger();
+    //     this.Html = new Html();
+    // }
     run() {
         console.log('run');
+        // this.Logger.log('write log ----------');
+        // this.Html.render();
     }
 }
 
@@ -79,3 +88,6 @@ function pluginMixins<T extends Constructor<App>>(Base:T) {
 const mixins = pluginMixins(App);
 const app = new mixins();
 app.run();
+
+// const app = new App();
+// app.run();

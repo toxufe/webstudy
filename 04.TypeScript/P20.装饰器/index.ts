@@ -73,9 +73,8 @@ const Base = (name:string) => {
 
 const Get = (url:string) => {
     const fn: MethodDecorator = (target, key, descriptor) => {
-        console.log('target: ', target);
-        console.log('key: ', key);
-        console.log('descriptor: ', descriptor);
+        console.log(target, key, descriptor);
+
     }
 
     return fn;

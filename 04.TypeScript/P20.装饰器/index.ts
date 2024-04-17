@@ -18,13 +18,13 @@
 // 1. 类装饰器 ClassDecorator
 // 编译阶段自己调用、不需要手动调用，会回传一个参数Target,Target就是当前类的构造函数
 // 作用:不破坏类解构给类增添方法和属性
-const Base:ClassDecorator = (target)=>{
-    console.log('target: ', typeof target);
-    target.prototype.url = 'http://www.baidu.com';
-    target.prototype.run = function(){
-        console.log('run');
-    }
-}
+// const Base:ClassDecorator = (target)=>{
+//     console.log('target: ', typeof target);
+//     target.prototype.url = 'http://www.baidu.com';
+//     target.prototype.run = function(){
+//         console.log('run');
+//     }
+// }
 
 // interface HttpType {
 //     url: string;
@@ -47,13 +47,24 @@ const Base:ClassDecorator = (target)=>{
 // class Http {
 // }
 
-class Http {
-}
-  
+// class Http {
+// }
+// Base(Http);
   
 
-// 断言成 any 类型 即不检查属性错误
-const http = new Http() as any;
-Base(http);
-console.log(http.url);
-http.run();
+// // 断言成 any 类型 即不检查属性错误
+// const http = new Http() as any;
+// console.log(http.url);
+// http.run();
+
+
+// 5. 装饰器工厂 DecoratorFactory
+
+const Base:ClassDecorator = (target)=>{
+    console.log('target: ', target);
+
+}
+@Base
+class Http {
+
+}

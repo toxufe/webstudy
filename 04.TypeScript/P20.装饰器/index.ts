@@ -1,3 +1,4 @@
+import axios from "axios";
 // 装饰器 Decorator
 // 本章有 7 个知识点
 // 修改配置文件
@@ -72,9 +73,13 @@ const Base = (name:string) => {
 }  
 
 const Get = (url:string) => {
-    const fn: MethodDecorator = (target, key, descriptor) => {
+    const fn: MethodDecorator = (target, key, descriptor:PropertyDescriptor) => {
         console.log(target, key, descriptor);
+        axios.get(url).then((res) => {
+            // console.log('res: ', res.data);
+            descriptor.value(res.data);
 
+        });
     }
 
     return fn;
@@ -95,7 +100,7 @@ const Get = (url:string) => {
 class Http {
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     getList (data: any) {
-        console.log('data: ', data);
+        console.log('data:111 ', data);
 
     }
     // @Post('/create')

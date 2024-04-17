@@ -6,3 +6,9 @@
 
 
 // 1. 类装饰器 ClassDecorator
+// 2. 属性装饰器 PropertyDecorator
+// 3. 参数装饰器 ParameterDecorator
+// 4. 方法装饰器 MethodDecorator
+// 5. 装饰器工厂 DecoratorFactory
+// 6. import 'reflect-metadata'
+// 7. axios

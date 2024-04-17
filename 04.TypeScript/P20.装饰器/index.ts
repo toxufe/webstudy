@@ -20,7 +20,6 @@
 
 const Base:ClassDecorator = (target)=>{
     console.log('target: ', target);
-
 }
 @Base
 class Http {

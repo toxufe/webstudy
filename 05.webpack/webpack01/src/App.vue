@@ -8,7 +8,7 @@ const count = ref<number>(0)
   <button @click="count++">+1</button>
 </template>
 
-<style scoped>
+<style>
 html,body {
   background: green;
 }

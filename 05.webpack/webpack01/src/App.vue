@@ -8,4 +8,8 @@ const count = ref<number>(0)
   <button @click="count++">+1</button>
 </template>
 
-<style scoped></style>
+<style scoped>
+html,body {
+  background: green;
+}
+</style>

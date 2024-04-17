@@ -35,6 +35,10 @@ const config = {
             {
                 test: /\.vue$/,
                 use: 'vue-loader'
+            },
+            {
+                test: /\.css$/,
+                use: 'css-loader'
             }
         ]
     },

@@ -12,6 +12,15 @@ const config = {
         path: path.resolve(__dirname, 'dist'),// 生成目录
         filename: 'bundle.js'// 生成文件名
     },
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
+            }
+        ]
+    },
 
 }
 

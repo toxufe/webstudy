@@ -1,12 +1,18 @@
 {
   "name": "webpack01",
   "version": "1.0.0",
-  "description": "## 命令记录 tsc --init npm init -y",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"webpack",
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
 }

@@ -15,5 +15,9 @@ src/shim.d.ts
 `"include": ["src/**/*"]`
 
 ## 安装依赖
+可打包
 webpack 5.0 以上，需要安装配套cli
 npm i webpack webpack-cli -D
+
+可本地运行
+npm i webpack-dev-server -D

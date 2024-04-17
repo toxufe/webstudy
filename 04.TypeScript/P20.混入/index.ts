@@ -52,4 +52,6 @@ class App {
     }
 }
 
-const 
+const pluginMixins = ()=>{
+
+}

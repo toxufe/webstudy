@@ -58,8 +58,20 @@ type Constructor<T> = new (...args: any[]) => T;
 // 插件的混入函数
 function pluginMixins<T extends Constructor<App>>(Base:T) {
     return class extends Base {
+        private Logger = new Logger();
+        private Html = new Html();
+
         constructor(...args: any[]) {
             super(...args);
+            this.Logger = new Logger();
+            this.Html = new Html();
+            
+        }
+
+        run(): void {
+            super.run();
+            this.Html.render();
+            this.Logger.log('run');
         }
     }
 }   

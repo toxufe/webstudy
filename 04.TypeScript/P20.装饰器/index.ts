@@ -98,6 +98,15 @@ const Get = (url:string) => {
 
 @Base("huahua")
 class Http {
+
+    // @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
+    // getList (data: any) {
+    //     console.log('data: ', data.result.list);
+
+    // }
+
+
+    // 参数装饰器
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     getList (data: any) {
         console.log('data: ', data.result.list);

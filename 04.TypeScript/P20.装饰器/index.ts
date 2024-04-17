@@ -87,7 +87,7 @@ const Get = (url:string) => {
 
     return fn;
 }
-
+ 
 // const Post = (url:string) => {
 //     const fn: MethodDecorator = (target, key, descriptor) => {
 //         console.log('target: ', target);
@@ -106,10 +106,15 @@ const Result = () => {
         // console.log(target, propertyKey, parameterIndex);
     }
     return fn;
-}
+} 
 
+
+const Namex:PropertyDecorator = (target, key) => {
+    // target 原型对象
+    console.log(target,key);
+}
 @Base("huahua")
-class Http {
+class Http { 
 
     // @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     // getList (data: any) {
@@ -118,10 +123,18 @@ class Http {
     // }
 
 
+    // 属性装饰器
+    @Namex
+    name: string = '';
+    constructor(name:string) {
+        this.name = name;
+    }
+
+
     // 参数装饰器
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     getList (@Result() data: any) {
-        console.log('data: ', data);
+        // console.log('data: ', data);
         // console.log('data: ', data.result.list);
 
     }

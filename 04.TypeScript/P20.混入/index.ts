@@ -35,23 +35,26 @@
 // 1. 插件类型的混入
 
 class Logger {
-    log(msg:string){
+    log(msg: string) {
         console.log(msg);
     }
 }
 
 class Html {
-    render(){
+    render() {
         console.log('render');
     }
 }
 
 class App {
-    run(){
+    run() {
         console.log('run');
     }
 }
-// 插件的混入函数
-const pluginMixins = ()=>{
 
+type Constructor<T> = new (...args: any[]) => T;
+
+// 插件的混入函数
+function pluginMixins<T extends Constructor<App>>(Base:T) {
+    return class extends Base {}
 }

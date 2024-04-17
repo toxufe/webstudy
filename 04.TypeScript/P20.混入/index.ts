@@ -66,6 +66,7 @@ type Constructor<T> = new (...args: any[]) => T;
 
 // 插件的混入函数
 function pluginMixins<T extends Constructor<App>>(Base:T) {
+    console.log('Base: ', typeof Base);
     return class extends Base {
         private Logger = new Logger();
         private Html = new Html();
@@ -86,6 +87,7 @@ function pluginMixins<T extends Constructor<App>>(Base:T) {
 }   
 
 const mixins = pluginMixins(App);
+console.log('mixins: ', mixins);
 const app = new mixins();
 app.run();
 

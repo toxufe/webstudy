@@ -74,7 +74,7 @@ const Base = (name:string) => {
 
 const Get = (url:string) => {
     const fn: MethodDecorator = (target, key, descriptor:PropertyDescriptor) => {
-        console.log(target, key, descriptor);
+        // console.log(target, key, descriptor);
         axios.get(url).then((res) => {
             // console.log('res: ', res.data);
             descriptor.value(res.data);
@@ -100,7 +100,7 @@ const Get = (url:string) => {
 class Http {
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     getList (data: any) {
-        console.log('data:111 ', data);
+        console.log('data: ', data.result.list);
 
     }
     // @Post('/create')
@@ -109,8 +109,8 @@ class Http {
     // }
 } 
 
-const http = new Http() as any;
-http.getList();
+// const http = new Http() as any;
+// http.getList();
 
 
 

@@ -12,3 +12,17 @@
 // 5. 装饰器工厂 DecoratorFactory
 // 6. import 'reflect-metadata'
 // 7. axios
+
+
+
+// 1. 类装饰器 ClassDecorator
+// 编译阶段自己调用
+
+const Base:ClassDecorator = ()=>{
+
+}
+@Base
+class Http {
+
+}
+ 

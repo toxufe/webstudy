@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import {} from "vue"
+<script setup >
+
 </script>
 
 <template>

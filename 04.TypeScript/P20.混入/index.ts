@@ -34,8 +34,22 @@
 // 类的混入
 // 1. 插件类型的混入
 
+class Logger {
+    log(msg:string){
+        console.log(msg);
+    }
+}
+
+class Html {
+    render(){
+        console.log('render');
+    }
+}
+
 class App {
     run(){
         console.log('run');
     }
 }
+
+const 

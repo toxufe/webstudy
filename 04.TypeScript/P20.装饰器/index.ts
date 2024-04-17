@@ -81,30 +81,32 @@ const Get = (url:string) => {
     return fn;
 }
 
-const Post = (url:string) => {
-    const fn: MethodDecorator = (target, key, descriptor) => {
-        console.log('target: ', target);
-        console.log('key: ', key);
-        console.log('descriptor: ', descriptor);
-    }
+// const Post = (url:string) => {
+//     const fn: MethodDecorator = (target, key, descriptor) => {
+//         console.log('target: ', target);
+//         console.log('key: ', key);
+//         console.log('descriptor: ', descriptor);
+//     }
 
-    return fn;
-}
+//     return fn;
+// }
 
 
 @Base("huahua")
 class Http {
-    @Get('/getList')
-    getList (){
+    @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
+    getList (data: any) {
+        console.log('data: ', data);
 
     }
-    @Post('/create')
-    create(){
+    // @Post('/create')
+    // create(){
 
-    }
+    // }
 } 
 
 const http = new Http() as any;
+http.getList();
 
 
 

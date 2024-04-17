@@ -25,7 +25,7 @@ const config = {
                 use: 'ts-loader',// 处理ts文件
             },
             {
-                test:/\.vue$/,
+                test: /\.vue$/,
                 use: 'vue-loader'
             }
         ]

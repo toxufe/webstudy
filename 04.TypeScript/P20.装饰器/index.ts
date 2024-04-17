@@ -44,14 +44,12 @@ const Base:ClassDecorator = (target)=>{
 
 
 @Base
-class Http implements HttpType {
-    url!: string;
-    run!: () => void;
-
+class Http {
 }
   
   
 
-const http = new Http();
+// 断言成 any 类型 即不检查属性错误
+const http = new Http() as any;
 console.log(http.url);
 http.run();

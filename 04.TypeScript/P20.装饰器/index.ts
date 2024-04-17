@@ -97,6 +97,7 @@ const Get = (url:string) => {
 
 
 const Result = () => {
+    // target 原型对象 
     const fn:ParameterDecorator = (target: Object, propertyKey: string | symbol | undefined, parameterIndex: number) => {
         console.log('target: ', target);
         console.log('propertyKey: ', propertyKey);

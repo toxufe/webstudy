@@ -14,6 +14,7 @@ const config = {
         path: path.resolve(__dirname, 'dist'),// 生成目录
         filename: 'bundle.js'// 生成文件名
     },
+    stats: 'errors-only',// 只显示错误信息
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'

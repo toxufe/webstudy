@@ -43,7 +43,10 @@ const Base:ClassDecorator = (target)=>{
 // http.run();
 
 
-@Base
+// @Base
+// class Http {
+// }
+
 class Http {
 }
   
@@ -51,5 +54,6 @@ class Http {
 
 // 断言成 any 类型 即不检查属性错误
 const http = new Http() as any;
+Base(http);
 console.log(http.url);
 http.run();

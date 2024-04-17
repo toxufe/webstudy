@@ -74,11 +74,13 @@ const Base = (name:string) => {
 }  
 
 const Get = (url:string) => {
-    const fn: MethodDecorator = (target, key, descriptor:PropertyDescriptor) => {
+    const fn: MethodDecorator = (target, _:any, descriptor:PropertyDescriptor) => {
         // console.log(target, key, descriptor);
+        let key = Reflect.getMetadata('key',target);
+        // console.log('key: ', key);
         axios.get(url).then((res) => {
             // console.log('res: ', res.data);
-            descriptor.value(res.data);
+            descriptor.value(key?res.data[key]:res.data);
 
         });
     }
@@ -100,7 +102,8 @@ const Get = (url:string) => {
 const Result = () => {
     // target 原型对象 
     const fn:ParameterDecorator = (target: Object, propertyKey: string | symbol | undefined, parameterIndex: number) => {
-        console.log(target, propertyKey, parameterIndex);
+        Reflect.defineMetadata('key','result',target);
+        // console.log(target, propertyKey, parameterIndex);
     }
     return fn;
 }
@@ -118,6 +121,7 @@ class Http {
     // 参数装饰器
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
     getList (@Result() data: any) {
+        console.log('data: ', data);
         // console.log('data: ', data.result.list);
 
     }

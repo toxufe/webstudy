@@ -29,7 +29,7 @@ npm i typescript -D
 
 ## vue
 npm i vue
-npm i vue-loader -D
+ 
 
 ## vue 和 html 产生关联
 npm i html-webpack-plugin -D

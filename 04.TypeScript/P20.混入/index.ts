@@ -51,7 +51,7 @@ class App {
         console.log('run');
     }
 }
-
+// 插件的混入函数
 const pluginMixins = ()=>{
 
 }

@@ -96,6 +96,15 @@ const Get = (url:string) => {
 // }
 
 
+const Result = () => {
+    const fn:ParameterDecorator = (target: Object, propertyKey: string | symbol | undefined, parameterIndex: number) => {
+        console.log('target: ', target);
+        console.log('propertyKey: ', propertyKey);
+        console.log('parameterIndex: ', parameterIndex);
+    }
+    return fn;
+}
+
 @Base("huahua")
 class Http {
 
@@ -108,7 +117,7 @@ class Http {
 
     // 参数装饰器
     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
-    getList (data: any) {
+    getList (@Result() data: any) {
         console.log('data: ', data.result.list);
 
     }

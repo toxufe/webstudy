@@ -13,6 +13,11 @@ class emit {
 const emitter = new emit();
 // 订阅
 emitter.on("sendmessage", (a, b) => {
+    console.log('sendmessage: ', 1, a, b);
+});
+// 订阅
+emitter.on("sendmessage", (a, b) => {
+    console.log('sendmessage: ', 2, a, b);
 });
 // 派发事件
 emitter.emit("sendmessage", "hello", true);

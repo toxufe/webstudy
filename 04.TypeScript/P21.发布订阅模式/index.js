@@ -7,6 +7,11 @@ class emit {
     }
     once(eventname, cb) {
         // 创建一个自定义函数，通过on触发，触发之后立马通过off函数回收
+        const once = (...args) => {
+            cb(...args);
+            this.off(eventname, once);
+        };
+        this.on(eventname, once);
     }
     on(eventname, cb) {
         if (this.events.has(eventname)) {

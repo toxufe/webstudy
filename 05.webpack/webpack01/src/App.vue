@@ -9,10 +9,13 @@ const count = ref<number>(0)
 </template>
 
 <style lang="scss">
+
+$red: #f00;
+$yellow:yellow;
 html,body {
-  background: green;
+  background: $red;
   button {
-    background: #f00;
+    background: $yellow;
     border: none;
   }
 }

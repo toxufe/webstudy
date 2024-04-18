@@ -59,11 +59,15 @@
 // personProxy.name = 'zfpx';
 
 // Reflect 会帮助我们操作对象 而且参数一模一样
-let person = { name: 'zf', age: 11 };
+let person = { name: 'zf', age: 30 };
 let personProxy = new Proxy(person,{
     get(target,key,receiver){
-        console.log('key: ', key);
+        if(target.age<=18){
+            return Reflect.get(target,key,receiver);
+        }else{
+            return '已成年';
+        }
     }
 });
 
-console.log('personProxy.name: ', personProxy.name);
+console.log('personProxy.age: ', personProxy.age);

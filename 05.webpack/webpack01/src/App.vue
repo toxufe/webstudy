@@ -13,7 +13,7 @@ const count = ref<number>(0)
 $red: #f00;
 $yellow:yellow;
 html,body {
-  background: $red;
+  // background: $red;
   button {
     background: $yellow;
     border: none;

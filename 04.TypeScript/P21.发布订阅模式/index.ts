@@ -7,23 +7,26 @@
 
 // })
 
-// 创建自定义事件
-// 监听器
-const cb = () => {
-    console.log("触发了……");
+// // 创建自定义事件
+// // 监听器
+// const cb = () => {
+//     console.log("触发了……");
 
-}
-document.addEventListener('myEvent', cb,{
-    once:true,// 配置触发一次
-})
+// }
+// document.addEventListener('myEvent', cb,{
+//     once:true,// 配置触发一次
+// })
 
 
-// 删除自定义事件
-document.removeEventListener('myEvent', cb);
+// // 删除自定义事件
+// document.removeEventListener('myEvent', cb);
 
-const e = new Event('myEvent');// 订阅中心
+// const e = new Event('myEvent');// 订阅中心
 
-// 派发事件  可以触发多次
-document.dispatchEvent(e);
-document.dispatchEvent(e);
-document.dispatchEvent(e);
+// // 派发事件  可以触发多次
+// document.dispatchEvent(e);
+// document.dispatchEvent(e);
+// document.dispatchEvent(e);
+
+// 自己实现发布订阅模式
+// emit

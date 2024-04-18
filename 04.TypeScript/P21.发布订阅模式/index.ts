@@ -29,4 +29,5 @@
 // document.dispatchEvent(e);
 
 // 自己实现发布订阅模式
-// emit
+// 实现 once on 监听  emit 派发  off 删除 订阅中心Map<事件的名称,[function]订阅者的集合>
+  

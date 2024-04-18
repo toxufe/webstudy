@@ -52,7 +52,7 @@ let set:Set<number> = new Set([1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
 let obj = {name:"zf"};// 引用一次 引用计数为1
 let xxx = obj;//   引用计数为2
 
-let map:WeakMap<object,any> = new WeakMap();
+let map:WeakMap<object,any> = new WeakMap();// 不会被垃圾回收机制回收
 map.set(obj,100);
 console.log('map: ', map);
 

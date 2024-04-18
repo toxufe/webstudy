@@ -29,7 +29,37 @@
 // document.dispatchEvent(e);
 
 // 自己实现发布订阅模式
-// 实现 once on 监听  emit 派发  off 删除 订阅中心Map<事件的名称,[function]订阅者的集合>
+// 实现 once on 监听/订阅  emit 派发  off 删除 订阅中心Map<事件的名称,[function]订阅者的集合>
 // 谁发布 谁订阅 谁删除
 
-  
+   
+
+
+interface IEvent {
+    events:Map<string,Function[]>
+    once:()=>void;
+    on:(eventname:string,cb:Function)=>void;
+    off:()=>void;
+    emit:(eventname:string,...args:any)=>void;
+}
+class emit implements IEvent{
+    events:Map<string,Function[]>;
+    constructor(){
+        this.events = new Map();
+    }
+
+    once(){}
+    on(eventname:string,cb:Function){}
+    off(){}
+    emit(eventname:string,...args:any){}
+}
+
+
+const emitter = new emit();
+// 订阅
+emitter.on("sendmessage",(a:string,b:boolean)=>{
+
+});
+
+// 派发事件
+emitter.emit("sendmessage","hello",true);

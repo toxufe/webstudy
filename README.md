@@ -179,3 +179,6 @@ npm install reflect-metadata
 
 ### IOC OR DI控制反转 ???
 
+### weakMap
+![alt text](<imgs/image copy 2.png>)
+

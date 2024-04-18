@@ -15,7 +15,10 @@ class emit {
             this.events.set(eventname, [cb]);
         }
     }
-    off() { }
+    off(eventname, cb) {
+        const cbs = this.events.get(eventname);
+        cbs === null || cbs === void 0 ? void 0 : cbs.splice(cbs.indexOf(cb), 1);
+    }
     emit(eventname, ...args) {
         const cbs = this.events.get(eventname);
         if (cbs) {
@@ -30,10 +33,14 @@ const emitter = new emit();
 emitter.on("sendmessage", (a, b) => {
     console.log('sendmessage: ', 1, a, b);
 });
-// 订阅
-emitter.on("sendmessage", (a, b) => {
+const cb = (a, b) => {
     console.log('sendmessage: ', 2, a, b);
-});
+};
+// 订阅
+emitter.on("sendmessage", cb);
+// 删除订阅
+emitter.off("sendmessage", cb);
 // 派发事件
 emitter.emit("sendmessage", "hello", true);
+// 删除的时候要删除同一个函数
 // console.log('emitter: ', emitter);

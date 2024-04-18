@@ -39,7 +39,7 @@ interface IEvent {
     events:Map<string,Function[]>
     once:()=>void;
     on:(eventname:string,cb:Function)=>void;
-    off:()=>void;
+    off:(eventname:string,cb:Function)=>void;
     emit:(eventname:string,...args:any)=>void;
 }
 class emit implements IEvent{
@@ -57,7 +57,10 @@ class emit implements IEvent{
             this.events.set(eventname,[cb]);   
         }
     }
-    off(){}
+    off(eventname:string,cb:Function){
+        const cbs = this.events.get(eventname);
+        cbs?.splice(cbs.indexOf(cb),1);
+    }
     emit(eventname:string,...args:any){
         const cbs = this.events.get(eventname);
         if(cbs){
@@ -75,12 +78,19 @@ const emitter = new emit();
 emitter.on("sendmessage",(a:string,b:boolean)=>{
     console.log('sendmessage: ', 1,a,b);
 });
-// 订阅
-emitter.on("sendmessage",(a:string,b:boolean)=>{
+
+const cb = (a:string,b:boolean)=>{
     console.log('sendmessage: ', 2,a,b);
-});
+};
+// 订阅
+emitter.on("sendmessage",cb);
+
+// 删除订阅
+emitter.off("sendmessage",cb);
 
 // 派发事件
 emitter.emit("sendmessage","hello",true);
+
+// 删除的时候要删除同一个函数
 
 // console.log('emitter: ', emitter);

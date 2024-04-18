@@ -6,6 +6,7 @@ class emit {
         this.events = new Map();
     }
     once(eventname, cb) {
+        // 创建一个自定义函数，通过on触发，触发之后立马通过off函数回收
     }
     on(eventname, cb) {
         if (this.events.has(eventname)) {

@@ -49,7 +49,7 @@ class emit implements IEvent{
     }
 
     once(eventname:string,cb:Function){
-        
+         // 创建一个自定义函数，通过on触发，触发之后立马通过off函数回收
     }
     on(eventname:string,cb:Function){
         if(this.events.has(eventname)){

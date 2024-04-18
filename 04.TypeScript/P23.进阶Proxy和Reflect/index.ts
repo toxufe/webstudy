@@ -59,4 +59,11 @@
 // personProxy.name = 'zfpx';
 
 
-let person = { namme: 'zf', age: 11 };
+let person = { name: 'zf', age: 11 };
+let personProxy = new Proxy(person,{
+    get(target,key,receiver){
+        console.log('key: ', key);
+    }
+});
+
+console.log('personProxy.name: ', personProxy.name);

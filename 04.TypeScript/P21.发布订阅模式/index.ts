@@ -75,18 +75,21 @@ class emit implements IEvent{
 const emitter = new emit();
 
 // 订阅
-emitter.on("sendmessage",(a:string,b:boolean)=>{
-    console.log('sendmessage: ', 1,a,b);
-});
+// emitter.on("sendmessage",(a:string,b:boolean)=>{
+//     console.log('sendmessage: ', 1,a,b);
+// });
 
 const cb = (a:string,b:boolean)=>{
     console.log('sendmessage: ', 2,a,b);
 };
-// 订阅
-emitter.on("sendmessage",cb);
 
-// 删除订阅
-emitter.off("sendmessage",cb);
+// 只是触发一次
+emitter.once("sendmessage",cb);
+// // 订阅
+// emitter.on("sendmessage",cb);
+
+// // 删除订阅
+// emitter.off("sendmessage",cb);
 
 // 派发事件
 emitter.emit("sendmessage","hello",true);

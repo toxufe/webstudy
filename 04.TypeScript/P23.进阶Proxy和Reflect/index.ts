@@ -24,11 +24,31 @@ let personProxy = new Proxy(person,{
         return true;
     },
 
-    // 拦截函数的调用
+    // 拦截函数的调用、call、apply  Proxy 支持函数的调用
     apply() {
         console.log('apply');
     
+    },
+    // 拦截和 in 操作符相关的操作
+    has() {
+        return true;
+    },
+    // 拦截 for ... in ...
+    ownKeys() {
+      return 'ownKeys';
+    },
+    // 拦截 new 操作符
+    construct() {
+        console.log('construct');
+        return {}
+    },
+    // 拦截删除的操作
+    deleteProperty() {
+        console.log('deleteProperty');
+        return true;
+    
     }
+
 
 });
 

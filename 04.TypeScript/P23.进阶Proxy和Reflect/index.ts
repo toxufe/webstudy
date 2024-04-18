@@ -58,7 +58,7 @@
 // // 赋值操作
 // personProxy.name = 'zfpx';
 
-
+// Reflect 会帮助我们操作对象 而且参数一模一样
 let person = { name: 'zf', age: 11 };
 let personProxy = new Proxy(person,{
     get(target,key,receiver){

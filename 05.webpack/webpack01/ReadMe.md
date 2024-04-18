@@ -64,7 +64,8 @@ npm i moment
  }
 ```
 
-
+## webpack 单独抽离Css文件
+npm install mini-css-extract-plugin -D
 ## 注意
 webpack 是基于nodejs环境的
 nodejs环境 是遵循commonjs规范的

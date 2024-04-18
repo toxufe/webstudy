@@ -44,11 +44,11 @@ const config = {
             },
             {
                 test: /\.css$/,
-                use: [CssExtractPlugin.loader, 'css-loader'],// 规则是从右向左解析 css-loader -> style-loader -> 插入 style 标签
+                use: ['style-loader', 'css-loader'],// 规则是从右向左解析 css-loader -> style-loader -> 插入 style 标签
             },
             {
                 test: /\.scss$/,
-                use: [CssExtractPlugin.loader, 'css-loader', 'sass-loader'],// 规则是从右向左解析 css-loader -> style-loader -> 插入 style 标签
+                use: ['style-loader', 'css-loader', 'sass-loader'],// 规则是从右向左解析 css-loader -> style-loader -> 插入 style 标签
             },
         ]
     },

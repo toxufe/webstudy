@@ -49,12 +49,20 @@ let set:Set<number> = new Set([1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
 // 垃圾回收机制 会自动回收内存 但是不会回收弱引用的内存 适合存储临时数据
 // weakMap 和 map 的区别 1. key 只能是对象 2. key 是弱引用的
 
-let obj = {name:"zf"};// 引用一次 引用计数为1
-let xxx = obj;//   引用计数为2
+let obj:any = {name:"zf"};// 引用一次 引用计数为1
+let xxx:any = obj;//   引用计数为2
 
 let map:WeakMap<object,any> = new WeakMap();// 不会被垃圾回收机制回收 
 map.set(obj,100);
 console.log('map: ', map.get(obj));
-console.log('map: ', map);
+// console.log('map: ', map);
+
+obj = null;// 引用计数为1
+xxx = null;// 引用计数为0
+console.log('map1: ', map.get(obj));
+
+
+// 浏览器问题
+
 
 

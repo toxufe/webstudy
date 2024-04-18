@@ -6,24 +6,34 @@ let person = {
     name: 'zf',
     age: 11
 }
-
+// 取值操作
+// console.log(person.name);
+// 赋值操作
+// person.name = 'zfpx';
 
 // 仅支持引用类型 数组、对象、函数、set、map
 let personProxy = new Proxy(person,{
     // 取值
     get(target,key){
-        console.log('target: ', target);
-
+        console.log('get: ', target);
     },
 
     // receiver 保证上下文的一致性
     set(target,key,value,receiver) {
+        console.log('set: ', target);
         return true;
     },
 
+    // 拦截函数的调用
+    apply() {
+        console.log('apply');
+    
+    }
+
 });
 
+
 // 取值操作
-console.log(personProxy.name);
+console.log('personProxy.age: ', personProxy.age);
 // 赋值操作
-// person.name = 'zfpx';
+personProxy.name = 'zfpx';

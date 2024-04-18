@@ -1,7 +1,8 @@
 # webpack 构建 ts + vue3 项目
 
 ## 命令记录
-tsc --init
+tsc --init 生成 ts 配置文件
+tsc -w  实时编译ts文件
 npm init -y
 webpack.config.js
 index.html

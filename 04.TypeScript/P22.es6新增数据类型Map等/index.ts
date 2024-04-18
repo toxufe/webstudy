@@ -7,6 +7,12 @@ let set:Set<number> = new Set([1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
 
 // 增
 set.add(10);
+// 删
+set.delete(1);
+// 清空
+set.clear();
+// 改
+
 // 查
 console.log('has: ', set.has(10));
 

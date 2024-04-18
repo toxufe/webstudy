@@ -38,6 +38,9 @@ npm i html-webpack-plugin -D
 npm i css-loader -D
 npm i style-loader -D
 
+## 日期库
+npm i moment
+
 ## 注意
 webpack 是基于nodejs环境的
 nodejs环境 是遵循commonjs规范的

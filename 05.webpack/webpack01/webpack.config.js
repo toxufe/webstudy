@@ -52,7 +52,8 @@ const config = {
             cacheGroups:{
                 moment:{
                     name:'moment',
-                    chunks:'all'
+                    chunks:'all',
+                    test:/[\\/]node_modules[\\/]moment[\\/]/
                 }
             }
         }

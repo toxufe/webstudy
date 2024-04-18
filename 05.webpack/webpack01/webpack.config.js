@@ -2,6 +2,7 @@ const { Configuration } = require('webpack');
 const path = require('node:path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
+const moment = require('moment/moment');
 
 // 通过注解的方式给对象提供声明
 /**
@@ -46,7 +47,16 @@ const config = {
             },
         ]
     },
-    optimization:{}// 优化项
+    optimization:{
+        splitChunks:{
+            cacheGroups:{
+                moment:{
+                    name:'moment',
+                    chunks:'all'
+                }
+            }
+        }
+    }// 优化项
 
 }
 

@@ -90,6 +90,11 @@ emitter.off("sendmessage",cb);
 
 // 派发事件
 emitter.emit("sendmessage","hello",true);
+emitter.emit("sendmessage","hello",true);
+emitter.emit("sendmessage","hello",true);
+emitter.emit("sendmessage","hello",true);
+emitter.emit("sendmessage","hello",true);
+emitter.emit("sendmessage","hello",true);
 
 // 删除的时候要删除同一个函数
 

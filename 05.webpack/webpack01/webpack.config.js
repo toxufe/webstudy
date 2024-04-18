@@ -46,6 +46,7 @@ const config = {
             },
         ]
     },
+    optimization:{}// 优化项
 
 }
 

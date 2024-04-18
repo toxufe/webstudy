@@ -66,8 +66,10 @@ let set:Set<number> = new Set([1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
 // // V8 GC 的垃圾回收机制是需要时间的 会有一个延迟 至少200ms
 
 // weakSet
-let weakSet:WeakSet<object> = new WeakSet();
-let obj:any = {name:"zf"};
-weakSet.add(obj);
-console.log('weakSet: ', weakSet.has(obj));
+// let weakSet:WeakSet<object> = new WeakSet();
+// let obj:any = {name:"zf"};
+// weakSet.add(obj);
+// console.log('weakSet: ', weakSet.has(obj));
+// obj = null;
+// console.log('weakSet: ', weakSet.has(obj));
 

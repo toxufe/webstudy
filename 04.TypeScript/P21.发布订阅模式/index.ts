@@ -49,13 +49,21 @@ class emit implements IEvent{
     }
 
     once(){}
-    on(eventname:string,cb:Function){}
+    on(eventname:string,cb:Function){
+        if(this.events.has(eventname)){
+            const cbs = this.events.get(eventname);
+            cbs && cbs.push(cb);
+        }else{
+            this.events.set(eventname,[cb]);   
+        }
+    }
     off(){}
     emit(eventname:string,...args:any){}
 }
 
 
 const emitter = new emit();
+
 // 订阅
 emitter.on("sendmessage",(a:string,b:boolean)=>{
     console.log('sendmessage: ', 1,a,b);
@@ -69,3 +77,5 @@ emitter.on("sendmessage",(a:string,b:boolean)=>{
 
 // 派发事件
 emitter.emit("sendmessage","hello",true);
+
+console.log('emitter: ', emitter);

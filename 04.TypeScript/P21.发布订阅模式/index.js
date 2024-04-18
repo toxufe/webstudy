@@ -6,7 +6,15 @@ class emit {
         this.events = new Map();
     }
     once() { }
-    on(eventname, cb) { }
+    on(eventname, cb) {
+        if (this.events.has(eventname)) {
+            const cbs = this.events.get(eventname);
+            cbs && cbs.push(cb);
+        }
+        else {
+            this.events.set(eventname, [cb]);
+        }
+    }
     off() { }
     emit(eventname, ...args) { }
 }
@@ -21,3 +29,4 @@ emitter.on("sendmessage", (a, b) => {
 });
 // 派发事件
 emitter.emit("sendmessage", "hello", true);
+console.log('emitter: ', emitter);

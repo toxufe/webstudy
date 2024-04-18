@@ -25,10 +25,27 @@ let set:Set<number> = new Set([1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
 
 
 
-// Map 的 key 可以是任意类型 可以是基础类型 也可以是引用类型
-let obj = {name:"zf"};
-let map:Map<object,any> = new Map(); 
+// // Map 的 key 可以是任意类型 可以是基础类型 也可以是引用类型
+// let obj = {name:"zf"};
+// let map:Map<object,any> = new Map(); 
 
-// 增
-map.set(obj,100);
-console.log('map: ', map);
+// // 增
+// map.set(obj,100);
+// console.log('map: ', map);
+// // 删
+// map.delete(obj);
+// // 改
+// map.set(obj,200);
+// // 查
+// console.log('map: ', map);
+// // 清空
+// map.clear();
+// // 查
+// console.log('map: ', map);
+
+// // 循环方法 forEach entries keys for ... of
+
+// weakMap weakSet 弱项 弱引用
+// 垃圾回收机制 会自动回收内存 但是不会回收弱引用的内存 适合存储临时数据
+
+

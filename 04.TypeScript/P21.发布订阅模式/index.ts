@@ -11,9 +11,13 @@
 // 监听器
 document.addEventListener('myEvent', (e) => {
     console.log('e: ', e);
+},{
+    once:true,// 配置触发一次
 })
 
 const e = new Event('myEvent');// 订阅中心
 
-// 派发事件
+// 派发事件  可以触发多次
+document.dispatchEvent(e);
+document.dispatchEvent(e);
 document.dispatchEvent(e);

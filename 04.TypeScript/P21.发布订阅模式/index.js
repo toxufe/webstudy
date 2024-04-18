@@ -16,7 +16,14 @@ class emit {
         }
     }
     off() { }
-    emit(eventname, ...args) { }
+    emit(eventname, ...args) {
+        const cbs = this.events.get(eventname);
+        if (cbs) {
+            cbs.forEach((cb) => {
+                cb(...args);
+            });
+        }
+    }
 }
 const emitter = new emit();
 // 订阅
@@ -29,4 +36,4 @@ emitter.on("sendmessage", (a, b) => {
 });
 // 派发事件
 emitter.emit("sendmessage", "hello", true);
-console.log('emitter: ', emitter);
+// console.log('emitter: ', emitter);

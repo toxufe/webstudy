@@ -5,7 +5,8 @@ class emit {
     constructor() {
         this.events = new Map();
     }
-    once() { }
+    once(eventname, cb) {
+    }
     on(eventname, cb) {
         if (this.events.has(eventname)) {
             const cbs = this.events.get(eventname);

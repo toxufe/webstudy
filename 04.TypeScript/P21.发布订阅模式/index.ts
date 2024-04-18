@@ -37,7 +37,7 @@
 
 interface IEvent {
     events:Map<string,Function[]>
-    once:()=>void;
+    once:(eventname:string,cb:Function)=>void;
     on:(eventname:string,cb:Function)=>void;
     off:(eventname:string,cb:Function)=>void;
     emit:(eventname:string,...args:any)=>void;
@@ -48,7 +48,9 @@ class emit implements IEvent{
         this.events = new Map();
     }
 
-    once(){}
+    once(eventname:string,cb:Function){
+        
+    }
     on(eventname:string,cb:Function){
         if(this.events.has(eventname)){
             const cbs = this.events.get(eventname);

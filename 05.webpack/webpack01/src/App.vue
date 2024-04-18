@@ -11,5 +11,9 @@ const count = ref<number>(0)
 <style lang="scss">
 html,body {
   background: green;
+  button {
+    background: #f00;
+    border: none;
+  }
 }
 </style>

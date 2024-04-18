@@ -13,7 +13,8 @@ const config = {
     entry: './src/main.ts',// 入口文件
     output: {
         path: path.resolve(__dirname, 'dist'),// 生成目录
-        filename: 'bundle.js'// 生成文件名
+        filename: '[chunkhash].js',// 生成文件名
+        clean: true// 清空上次打包的文件
     },
     stats: 'errors-only',// 只显示错误信息
     plugins: [
@@ -52,8 +53,14 @@ const config = {
             cacheGroups:{
                 moment:{
                     name:'moment',
-                    chunks:'all',
+                    chunks:'all',// 全部拆出来
                     test:/[\\/]node_modules[\\/]moment[\\/]/
+                },
+                common:{
+                    name:'common',
+                    chunks:'all',// 全部拆出来
+                    minSize:0,// 最小拆分大小
+                    minChunks:2,// 最小拆分次数
                 }
             }
         }

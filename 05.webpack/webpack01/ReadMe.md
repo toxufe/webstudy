@@ -42,6 +42,27 @@ npm i style-loader -D
 npm i moment
 
 ## webpack 分包加载
+```
+ {
+    optimization:{
+        splitChunks:{
+            cacheGroups:{
+                moment:{
+                    name:'moment',
+                    chunks:'all',// 全部拆出来
+                    test:/[\\/]node_modules[\\/]moment[\\/]/
+                },
+                common:{
+                    name:'common',
+                    chunks:'all',// 全部拆出来
+                    minSize:0,// 最小拆分大小
+                    minChunks:2,// 最小拆分次数
+                }
+            }
+        }
+    }// 优化项
+ }
+```
 
 
 ## 注意

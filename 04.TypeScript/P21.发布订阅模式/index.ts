@@ -14,3 +14,6 @@ document.addEventListener('myEvent', (e) => {
 })
 
 const e = new Event('myEvent');// 订阅中心
+
+// 派发事件
+document.dispatchEvent(e);

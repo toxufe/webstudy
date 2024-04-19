@@ -85,3 +85,12 @@
 
 // 观察者模式 mobx observable
 // redux mobx 状态管理器  核心是观察者模式
+
+
+const observable = <T extends object>(params:T)=>{
+    new Proxy(params,{
+        set(target,key,value,receiver){
+            
+        }
+    });
+}

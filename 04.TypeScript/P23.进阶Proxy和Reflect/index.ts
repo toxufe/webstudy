@@ -73,7 +73,15 @@
 // console.log('personProxy.age: ', personProxy.age);
 
 // reflect 专题
-let person = {name: 'zf', age: 30};
-// 取值
-console.log("直接取值",person.name);
-console.log("Reflect",Reflect.get(person,'name'));
+// let person = {name: 'zf', age: 30};
+// // 取值
+// console.log("直接取值",person.name);
+// // 保证上下文的正确和一致性
+// console.log("Reflect",Reflect.get(person,'name',person));
+
+// Reflect.set(person,'name','zfpx',person);
+
+// console.log("Reflect",Reflect.get(person,'name',person));
+
+// 观察者模式 mobx observable
+// mobx 状态管理器

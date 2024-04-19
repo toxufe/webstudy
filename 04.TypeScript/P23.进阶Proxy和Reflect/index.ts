@@ -27,7 +27,7 @@
 //     // 拦截函数的调用、call、apply  Proxy 支持函数的调用
 //     apply() {
 //         console.log('apply');
-    
+
 //     },
 //     // 拦截和 in 操作符相关的操作
 //     has() {
@@ -46,7 +46,7 @@
 //     deleteProperty() {
 //         console.log('deleteProperty');
 //         return true;
-    
+
 //     }
 
 
@@ -87,10 +87,28 @@
 // redux mobx 状态管理器  核心是观察者模式
 
 
-const observable = <T extends object>(params:T)=>{
-    new Proxy(params,{
-        set(target,key,value,receiver){
-            
+const list: Set<Function> = new Set();
+
+const autorun = (fn: Function) => {
+    if (!list.has(fn)) {
+        list.add(fn);
+    }
+}
+
+
+const observable = <T extends object>(params: T) => {
+    return new Proxy(params, {
+        set(target, key, value, receiver) {
+            list.forEach(fn => fn());
+            return Reflect.set(target, key, value, receiver);
         }
     });
 }
+
+
+let proxyobj = observable({ name: 'zf', age: 30 });
+autorun(() => {
+    console.log("autorun------------------");
+});
+proxyobj.name = "xxx";
+proxyobj.age = 60;

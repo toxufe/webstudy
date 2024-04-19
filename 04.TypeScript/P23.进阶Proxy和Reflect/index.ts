@@ -11,7 +11,7 @@
 // // 赋值操作
 // // person.name = 'zfpx';
 
-// // 仅支持引用类型 数组、对象、函数、set、map
+// // Proxy 仅支持引用类型 数组、对象、函数、set、map
 // let personProxy = new Proxy(person,{
 //     // 取值
 //     get(target,key){

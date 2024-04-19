@@ -84,4 +84,4 @@
 // console.log("Reflect",Reflect.get(person,'name',person));
 
 // 观察者模式 mobx observable
-// mobx 状态管理器
+// redux mobx 状态管理器  核心是观察者模式

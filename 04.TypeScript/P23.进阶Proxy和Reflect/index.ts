@@ -71,3 +71,9 @@
 // });
 
 // console.log('personProxy.age: ', personProxy.age);
+
+// reflect 专题
+let person = {name: 'zf', age: 30};
+// 取值
+console.log("直接取值",person.name);
+console.log("Reflect",Reflect.get(person,'name'));

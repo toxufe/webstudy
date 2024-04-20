@@ -68,6 +68,7 @@
 // 2. 类型谓词 | 自定义类型守卫
 // 语法规则：接受布尔值的函数，函数名以is开头
 // 实现一个函数 该函数可以传入任何类型 语法：参数 is 类型
+// const isNum = (val: any): val is number => typeof val === 'number';
 // 但是如果是object 就检查里边的属性，如果属性是number的话就取两位小数
 // 如果是字符串的话就去除左右空格
 // 如果是函数的话就执行
@@ -76,8 +77,8 @@
 // 简写
 const isObject = (val: any)=> ({}).toString.call(val) === '[object Object]';
 // 类型缩窄
-const isNum = (val: any) => typeof val === 'number';
-const isStr = (val: any) => typeof val === 'string';
+const isNum = (val: any): val is number => typeof val === 'number';
+const isStr = (val: any): val is string => typeof val === 'string';
 const isFn = (val: any) => typeof val === 'function';
 
 // 1. 没有提示 any 类型 | 自定义守卫

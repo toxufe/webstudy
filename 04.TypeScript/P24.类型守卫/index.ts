@@ -106,12 +106,21 @@ const fn = (data:any)=>{
     }
 }
 
-let ccc = {
-    aaa:"xxx",
-    bbb:"xxx",
+// let ccc = {
+//     aaa:"xxx",
+//     bbb:"xxx",
+// }
+// // Object.create() 静态方法以一个现有对象作为原型，创建一个新对象。
+// let ddd = Object.create(ccc);
+// ddd.age = 18;
+// ddd.name = "zzz";
+
+let ddd= {
+    a:1000.22222222222222222,
+    b:"  zzz  ",
+    c:()=>{
+        console.log(this);
+        return this.a;
+    },
 }
-// Object.create() 静态方法以一个现有对象作为原型，创建一个新对象。
-let ddd = Object.create(ccc);
-ddd.age = 18;
-ddd.name = "zzz";
 fn(ddd);

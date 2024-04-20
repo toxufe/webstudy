@@ -80,6 +80,14 @@ const isObject = (val: any)=> ({}).toString.call(val) === '[object Object]';
 const isNum = (val: any): val is number => typeof val === 'number';
 const isStr = (val: any): val is string => typeof val === 'string';
 const isFn = (val: any) => typeof val === 'function';
+const isNumx = (val: any): val is number =>{
+    return typeof val === 'number';
+}
+function isNumxx(val: any): val is number{
+    return typeof val === 'number';
+}
+
+
 
 // 1. 没有提示 any 类型 | 自定义守卫
 // 2. propertier of undefined (reading 'a')

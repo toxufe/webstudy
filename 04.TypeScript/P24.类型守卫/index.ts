@@ -79,7 +79,7 @@ const isNum = (val: any) => typeof val === 'number';
 const isStr = (val: any) => typeof val === 'string';
 const isFn = (val: any) => typeof val === 'function';
 
-// 1. 没有提示 any 类型
+// 1. 没有提示 any 类型 | 自定义守卫
 // 2. propertier of undefined (reading 'a')
 // node 环境 this undefined
 // 浏览器的环境 this window

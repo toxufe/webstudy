@@ -62,6 +62,9 @@ var isFn = function (val) { return typeof val === 'function'; };
 // 1. 没有提示 any 类型
 // 2. propertier of undefined (reading 'a')
 // node 环境 this undefined
+// 浏览器的环境 this window
+// js的基础知识 如果函数独立调用 this 指向 window, 如果是对象调用 this 指向对象
+// 函数被赋值给一个变量了 所以属于独立调用 this 指向 window
 var fn = function (data) {
     if (isObject(data)) {
         // console.log('data: ', data);  
@@ -81,7 +84,8 @@ var fn = function (data) {
                 data[key] = val_1.trim();
             }
             if (isFn(val_1)) {
-                val_1();
+                // val(); // 独立调用 this 指向 window
+                val_1.call(data); // 对象调用 this 指向对象
             }
         });
     }

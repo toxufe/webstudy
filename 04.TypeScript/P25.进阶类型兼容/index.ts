@@ -4,11 +4,13 @@
 // 一只鸟 走路像鸭子 ，游泳也像，做什么都像，那么这只鸟就可以成为鸭子类型。
 
 // 举例
+// 主类型
 interface A {
     name:string
     age:number
 }
  
+// 子类型
 interface B {
     name:string
     age:number

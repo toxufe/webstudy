@@ -71,3 +71,6 @@
 // 如果是字符串的话就去除左右空格
 // 如果是函数的话就执行
 
+// const isObject = (val: any)=> Object.prototype.toString.call(val) === '[object Object]';
+// 简写
+const isObject = (val: any)=> ({}).toString.call(val) === '[object Object]';

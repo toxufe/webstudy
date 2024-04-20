@@ -79,7 +79,7 @@ const fn = (data:any)=>{
         console.log('data: ', data);  
         // 遍历属性不能用for in 因为for in 会遍历原型链上的属性
         for (const key in data) {
-            console.log('key: ', key);
+            console.log('forin-key: ', key,data[key]);
         }
 
         // Object.keys() 会返回一个由一个给定对象的自身可枚举属性组成的数组
@@ -93,4 +93,8 @@ let ccc = {
         this.name = "yyy";
     }
 }
-fn(Object.create(ccc));
+// Object.create() 静态方法以一个现有对象作为原型，创建一个新对象。
+let ddd = Object.create(ccc);
+ddd.age = 18;
+ddd.name = "zzz";
+fn(ddd);

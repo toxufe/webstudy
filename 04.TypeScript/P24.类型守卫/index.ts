@@ -93,4 +93,4 @@ let ccc = {
         this.name = "yyy";
     }
 }
-fn(ccc);
+fn(Object.create(ccc));

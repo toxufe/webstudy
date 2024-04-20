@@ -59,3 +59,5 @@ const fn = ()=> [1,2,3,"xxx"]
 // type fnreturntype = ReturnType<typeof fn>; // number[]
 
 type CustomReturnType<T extends (...args:any)=>any> = T extends (...args:any)=>infer R ? R : any;
+
+// type fnreturntype = CustomReturnType<typeof fn>; // number[]

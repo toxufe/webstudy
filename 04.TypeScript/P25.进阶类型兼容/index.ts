@@ -35,6 +35,44 @@
 
 // 逆变
 // 逆变一般发生于函数的参数上面
+// interface A {
+//     name:string
+//     age:number
+// }
+ 
+// interface B {
+//     name:string
+//     age:number
+//     sex:string
+// }
+ 
+// let a:A = {
+//     name:"老墨我想吃鱼了",
+//     age:33,
+// }
+ 
+// let b:B = {
+//     name:"老墨我不想吃鱼",
+//     age:33,
+//     sex:"女"
+// }
+ 
+// a = b // 值的话是逆变
+ 
+// let fna = (params:A) => {
+ 
+// }
+// let fnb = (params:B) => {
+    
+// }
+ 
+// fna = fnb //错误
+// fnb = fna //正确
+// 这里比较绕，注意看fna 赋值 给 fnb 其实最后执行的还是fna 而 fnb的类型能够完全覆盖fna 所以这一定是安全的，相反fna的类型不能完全覆盖fnb少一个sex所以是不安全的。
+
+
+// 双向协变
+// tsconfig strictFunctionTypes 设置为false 支持双向协变 fna fnb 随便可以来回赋值
 interface A {
     name:string
     age:number
@@ -58,6 +96,7 @@ let b:B = {
 }
  
 a = b // 值的话是逆变
+
  
 let fna = (params:A) => {
  
@@ -66,6 +105,5 @@ let fnb = (params:B) => {
     
 }
  
-// fna = fnb //错误
-// fnb = fna //正确
-// 这里比较绕，注意看fna 赋值 给 fnb 其实最后执行的还是fna 而 fnb的类型能够完全覆盖fna 所以这一定是安全的，相反fna的类型不能完全覆盖fnb少一个sex所以是不安全的。
+fna = fnb 
+fnb = fna 

@@ -54,3 +54,8 @@
 
 
 // * 2. ReturnType
+// 获取函数的返回值类型
+const fn = ()=> [1,2,3,"xxx"]
+// type fnreturntype = ReturnType<typeof fn>; // number[]
+
+type CustomReturnType<T extends (...args:any)=>any> = T extends (...args:any)=>infer R ? R : any;

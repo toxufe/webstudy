@@ -62,5 +62,26 @@
 
 
 //  Pick 提取部分属性
+interface User {
+    name: string
+    age: number
+    address:string
+}
+
+// type PickUser = Pick<User,'age' | 'name'>;
+// type PickUser = {
+//     age: number;
+//     name: string;
+// }
+
+// 自己实现一个 Pick
+type MyPick<T,K extends keyof T> = {
+    [P in K]:T[P];
+}
+
+type PickUser = MyPick<User,'age' | 'address'>;
+
+
+
 //  Omit 忽略部分属性 并且返回新的类型
 //  Exclude 排除部分属性

@@ -74,3 +74,10 @@
 // const isObject = (val: any)=> Object.prototype.toString.call(val) === '[object Object]';
 // 简写
 const isObject = (val: any)=> ({}).toString.call(val) === '[object Object]';
+const fn = (data:any)=>{
+    if(isObject(data)){
+        console.log('data: ', data);  
+        // 遍历属性不能用for in 因为for in 会遍历原型链上的属性
+    }
+}
+fn({});

@@ -88,10 +88,8 @@ const fn = (data:any)=>{
 }
 
 let ccc = {
-    name:"xxx",
-    constractor(){
-        this.name = "yyy";
-    }
+    aaa:"xxx",
+    bbb:"xxx",
 }
 // Object.create() 静态方法以一个现有对象作为原型，创建一个新对象。
 let ddd = Object.create(ccc);

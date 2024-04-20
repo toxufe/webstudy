@@ -62,26 +62,31 @@
 
 
 //  Pick 提取部分属性
-interface User {
-    name: string
-    age: number
-    address:string
-}
-
-// type PickUser = Pick<User,'age' | 'name'>;
-// type PickUser = {
-//     age: number;
-//     name: string;
+// interface User {
+//     name: string
+//     age: number
+//     address:string
 // }
 
-// 自己实现一个 Pick
-type MyPick<T,K extends keyof T> = {
-    [P in K]:T[P];
-}
+// // type PickUser = Pick<User,'age' | 'name'>;
+// // type PickUser = {
+// //     age: number;
+// //     name: string;
+// // }
 
-type PickUser = MyPick<User,'age' | 'address'>;
+// // 自己实现一个 Pick
+// type MyPick<T,K extends keyof T> = {
+//     [P in K]:T[P];
+// }
+
+// type PickUser = MyPick<User,'age' | 'address'>;
+// // type PickUser = {
+// //     age: number;
+// //     address: string;
+// // }
 
 
+//  Omit 忽略部分属性 并且返回新的类型 排除的是联合类型 通过两个联合类型的差集
 
-//  Omit 忽略部分属性 并且返回新的类型
+
 //  Exclude 排除部分属性

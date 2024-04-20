@@ -15,11 +15,18 @@ interface User {
     address:string
 }
 
-type PartialUser = Partial<User>;// 所有属性 可选的意思是 接受一个泛型，泛型里边的属性都会变成可选的属性
+// type PartialUser = Partial<User>;// 所有属性 可选的意思是 接受一个泛型，泛型里边的属性都会变成可选的属性
 // type PartialUser = {
 //     name?: string | undefined;
 //     age?: number | undefined;
 //     address?: string | undefined;
-// }
+// } 
 
+// 自己实现一个 Partial
+// 联合类型
+type MyPartial<T> = {
+    [K in keyof T]?:T[K];
+};// 用来接收一个泛型
+
+type PartialUser = MyPartial<User>;
 

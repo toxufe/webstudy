@@ -87,6 +87,16 @@
 
 
 //  Omit 忽略部分属性 并且返回新的类型 排除的是联合类型 通过两个联合类型的差集
+interface User {
+    name: string
+    age: number
+    address:string
+}
+
+// type OmitUser = Omit<User,'age' | 'name'>;
+// type OmitUser = {
+//     address: string;
+// }
  
 
 //  Exclude 排除部分属性

@@ -21,23 +21,26 @@ type Value = "1" | "2" | "3";
 
 
 // 嵌套的写法
-const obj:Record<Key,Record<Key,Value>> = {
-    a:{
-        a:"1",
-        b:"2",
-        c:"3"
-    },
-    b:{
-        a:"1",
-        b:"2",
-        c:"3"
-    },
-    c:{
-        a:"1",
-        b:"1",
-        c:"3"
-    }
-};
+// const obj:Record<Key,Record<Key,Value>> = {
+//     a:{
+//         a:"1",
+//         b:"2",
+//         c:"3"
+//     },
+//     b:{
+//         a:"1",
+//         b:"2",
+//         c:"3"
+//     },
+//     c:{
+//         a:"1",
+//         b:"1",
+//         c:"3"
+//     }
+// };
+
+// 源码的写法
+// 对象的key只能是string或者number或者symbol
 
 
 // * 2. ReturnType

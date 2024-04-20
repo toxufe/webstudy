@@ -91,3 +91,10 @@
 
 //  Exclude 排除部分属性
 // never 在联合类型中会被排除掉
+
+// type myExclude = Exclude<"a"|"b"|"c","c">;
+// // type myExclude = "a" | "b"
+// extends 在联合类型是是包含的意思
+// type customExclude<T,K> = T extends K ? never : T;
+// type myExclude = customExclude<"a"|"b"|"c","c"|"a">;
+// // type myExclude = "b"

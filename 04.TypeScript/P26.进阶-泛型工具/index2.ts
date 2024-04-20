@@ -58,7 +58,7 @@
 const fn = ()=> [1,2,3,"xxx"]
 // type fnreturntype = ReturnType<typeof fn>; // number[]
 
-// 获取函数返回值 需要编写一个条件类型 
-type CustomReturnType<T extends Function> = T extends (...args:any)=>infer R ? R : any;
+// 获取函数返回值 需要编写一个条件类型  infer 推断类型 并且定义一个变量 
+type CustomReturnType<T extends Function> = T extends (...args:any)=>infer R ? R : never;
 
-// type fnreturntype = CustomReturnType<typeof fn>; // number[]
+type fnreturntype = CustomReturnType<typeof fn>; // number[]

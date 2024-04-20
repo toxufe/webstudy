@@ -82,6 +82,7 @@ const isFn = (val: any) => typeof val === 'function';
 // 1. 没有提示 any 类型
 // 2. propertier of undefined (reading 'a')
 // node 环境 this undefined
+// 浏览器的环境 this window
 const fn = (data:any)=>{
     if(isObject(data)){
         // console.log('data: ', data);  

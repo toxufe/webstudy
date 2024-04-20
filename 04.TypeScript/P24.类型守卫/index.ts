@@ -74,6 +74,12 @@
 // const isObject = (val: any)=> Object.prototype.toString.call(val) === '[object Object]';
 // 简写
 const isObject = (val: any)=> ({}).toString.call(val) === '[object Object]';
+// 类型缩窄
+const isNum = (val: any) => typeof val === 'number';
+const isStr = (val: any) => typeof val === 'string';
+const isFn = (val: any) => typeof val === 'function';
+
+// 没有提示 any 类型
 const fn = (data:any)=>{
     if(isObject(data)){
         // console.log('data: ', data);  
@@ -84,6 +90,19 @@ const fn = (data:any)=>{
 
         // // Object.keys() 会返回一个由一个给定对象的自身可枚举属性组成的数组
         // console.log('Object.keys(): ', Object.keys(data));
+        let val;
+        Object.keys(data).forEach((key)=>{
+            val = data[key];
+            if(isNum(val)){
+                data[key] = val.toFixed(2);
+            }
+            if(isStr(val)){
+                data[key] = val.trim();
+            }
+            if(isFn(val)){
+                val();
+            }
+        })
     }
 }
 

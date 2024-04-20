@@ -106,7 +106,10 @@ const fn = (data:any)=>{
             }
             if(isFn(val)){
                 // val(); // 独立调用 this 指向 window
-                val.call(data); // 对象调用 this 指向对象
+                // Function 实例的 call() 方法会以给定的 this 值和逐个提供的参数调用该函数。
+                // val.call(data); // 对象调用 this 指向对象
+
+                data[key]();
             }
         })
     }

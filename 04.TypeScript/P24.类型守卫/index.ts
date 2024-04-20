@@ -78,9 +78,9 @@ const fn = (data:any)=>{
     if(isObject(data)){
         console.log('data: ', data);  
         // 遍历属性不能用for in 因为for in 会遍历原型链上的属性
-        // for (const key in data) {
-        //     console.log('key: ', key);
-        // }
+        for (const key in data) {
+            console.log('key: ', key);
+        }
 
         // Object.keys() 会返回一个由一个给定对象的自身可枚举属性组成的数组
         console.log('Object.keys(): ', Object.keys(data));

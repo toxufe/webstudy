@@ -57,7 +57,7 @@ let b:B = {
     sex:"女"
 }
  
-a = b
+a = b // 值的话是逆变
  
 let fna = (params:A) => {
  
@@ -67,6 +67,5 @@ let fnb = (params:B) => {
 }
  
 // fna = fnb //错误
- 
 // fnb = fna //正确
 // 这里比较绕，注意看fna 赋值 给 fnb 其实最后执行的还是fna 而 fnb的类型能够完全覆盖fna 所以这一定是安全的，相反fna的类型不能完全覆盖fnb少一个sex所以是不安全的。

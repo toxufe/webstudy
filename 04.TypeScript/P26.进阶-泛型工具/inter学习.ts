@@ -24,3 +24,4 @@
 
 
 // infer 协变 出现在对象的属性中
+type Bar<T> = T extends {a:infer N,b:infer B} ? {a:infer N,b:infer B} :T;

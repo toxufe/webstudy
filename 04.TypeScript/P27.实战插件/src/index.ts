@@ -9,7 +9,7 @@ export class Storage implements StorageCls {
         };
         localStorage.setItem(key,JSON.stringify(data));
     }
-    get<T>(key:Key) {
+    get<T>(key:Key):Result<T|null> {
        const value = localStorage.getItem(key);
        if(value){
         const data:Data<T> = JSON.parse(value); 

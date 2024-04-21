@@ -10,3 +10,7 @@
     - module 改成 ESNext
     - moduleResolution node
     - strict false 
+9. 编写程序
+10. 打包
+    - 安装打包库
+    - npm install rollup typescript rollup-plugin-typescript2

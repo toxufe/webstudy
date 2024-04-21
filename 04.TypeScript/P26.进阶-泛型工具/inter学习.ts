@@ -27,10 +27,14 @@
 let obj = {
     name: "张三",
     age:30,
-    c: 1
+    c: 1,
+    d:function(){
+        console.log("d");
+    }
 }
 type Bar<T> = T extends {a:infer N,b:infer B} ? [N,B] :T;
 
+console.log(typeof obj); // [string,number]
 type test = Bar<typeof obj>;
 // type test = {
 //     name: string;

@@ -9,4 +9,4 @@
 8. tsc --init 生成tsconfig.json文件
     - module 改成 ESNext
     - moduleResolution node
-    - strict false
+    - strict false 

@@ -1,8 +1,8 @@
 // expire 过期时间key permanent 永久不过期
-import { StorageCls,Key } from "./type";
+import { StorageCls,Key,Expire } from "./type";
 import { Dictionaries } from "./enum";
 export class Storage implements StorageCls {
-    set<T>(key:Key,value:T,expire:Dictionaries.permanent){
+    set<T>(key:Key,value:T,expire:Expire=Dictionaries.permanent){
         console.log('get');
     }
     get() {

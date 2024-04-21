@@ -3,3 +3,7 @@
 // 获取promise的返回值
 // infer 协变
 // infer 逆变
+
+
+
+// 获取promise的返回值

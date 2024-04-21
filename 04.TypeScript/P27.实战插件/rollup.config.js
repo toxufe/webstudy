@@ -9,7 +9,7 @@ export default {
     output:{
         file: path.resolve(dirName, './dist/index.js'),
     },
-    plugin:[
+    plugins:[
         ts()
     ]
 }

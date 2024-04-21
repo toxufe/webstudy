@@ -13,7 +13,12 @@ export class Storage implements StorageCls {
        const value = localStorage.getItem(key);
        if(value){
         const data:Data<T> = JSON.parse(value);
-       }else{}
+       }else{
+        return {
+            message:'值无效',
+            value:null
+        }
+       }
     }
     remove() {
         console.log('remove');

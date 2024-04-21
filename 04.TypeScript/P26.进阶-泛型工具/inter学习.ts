@@ -24,4 +24,15 @@
 
 
 // infer 协变 出现在对象的属性中
-type Bar<T> = T extends {a:infer N,b:infer B} ? {a:infer N,b:infer B} :T;
+let obj = {
+    name: "张三",
+    age:30,
+    c: 1
+}
+type Bar<T> = T extends {a:infer N,b:infer B} ? [N,B] :T;
+
+type test = Bar<typeof obj>;
+// type test = {
+//     name: string;
+//     age: number;
+// }

@@ -14,3 +14,4 @@
 10. 打包
     - 安装打包库
     - npm install rollup typescript rollup-plugin-typescript2
+11. package.json 配置打包命令 build rollup -c

@@ -18,4 +18,4 @@
 
 ## 补充说明
 新版的rollup
-package.json 指定 type module
+package.json 指定 type module 

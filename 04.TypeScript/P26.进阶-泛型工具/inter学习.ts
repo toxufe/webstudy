@@ -38,8 +38,15 @@
 // //     age: number;
 // // }
 
-// 逆变出现函数的参数中
+// 逆变出现函数的参数中 逆变返回的是交叉类型
 type Bar<T> = T extends {
     a:(x:infer U) => void;
     b:(x:infer U) => void;
-} ? U : T;
+} ? U : never;
+
+type T = Bar<{
+    a:(x:string) => void;
+    b:(x:number) => void;
+}>;
+// type T = never
+

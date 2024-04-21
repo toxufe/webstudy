@@ -26,13 +26,9 @@
 // infer 协变 出现在对象的属性中
 let obj = {
     name: "张三",
-    age:30,
-    c: 1,
-    d:function(){
-        console.log("d");
-    }
+    age:30
 }
-type Bar<T> = T extends {a:infer N,b:infer B} ? [N,B] :T;
+type Bar<T> = T extends {name:infer N,age:infer B} ? [N,B] :T;
 
 console.log(typeof obj); // [string,number]
 type test = Bar<typeof obj>;

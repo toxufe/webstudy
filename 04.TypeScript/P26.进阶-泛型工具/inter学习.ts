@@ -8,15 +8,19 @@
 
 
 // 获取promise的返回值
-interface User {
-    name: string;
-    age: number;
-}
-// type PromiseType = Promise<User>;
-// type GetPromiseType<T> = T extends Promise<infer U> ? U : T;
+// interface User {
+//     name: string;
+//     age: number;
+// }
+// // type PromiseType = Promise<User>;
+// // type GetPromiseType<T> = T extends Promise<infer U> ? U : T;
 
-// 多层Promise
-type PromiseType = Promise<Promise<Promise<User>>>;
-type GetPromiseType<T> = T extends Promise<infer U> ? U : T;
-type T = GetPromiseType<PromiseType>; // User
-// type T = User
+// // 多层Promise
+// type PromiseType = Promise<Promise<Promise<User>>>;
+// type GetPromiseType<T> = T extends Promise<infer U> ? GetPromiseType<U> : T;
+// type T = GetPromiseType<PromiseType>; // User
+// // type T = User
+
+
+
+// infer 协变 出现在对象的属性中

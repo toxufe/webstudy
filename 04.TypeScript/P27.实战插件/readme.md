@@ -5,3 +5,5 @@
 4. 新建src/index.ts 存放插件的主要逻辑
 5. src的平级新建 index.html 用来做代码测试
 6. npm init -y package.json
+7. src平级新建rollup.config.js 作用：把ts打包成js
+8. tsc --init 生成tsconfig.json文件

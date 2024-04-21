@@ -1,12 +1,19 @@
 // expire 过期时间key permanent 永久不过期
-import { StorageCls,Key,Expire } from "./type";
+import { StorageCls,Key,Expire,Data } from "./type";
 import { Dictionaries } from "./enum";
 export class Storage implements StorageCls {
     set<T>(key:Key,value:T,expire:Expire=Dictionaries.permanent){
-        console.log('get');
+        const data = {
+            value,
+            [Dictionaries.expire]:expire
+        };
+        localStorage.setItem(key,JSON.stringify(data));
     }
-    get() {
-        console.log('set');
+    get<T>(key:Key) {
+       const value = localStorage.getItem(key);
+       if(value){
+        const data:Data<T> = JSON.parse(value);
+       }else{}
     }
     remove() {
         console.log('remove');

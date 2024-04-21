@@ -24,15 +24,22 @@
 
 
 // infer 协变 出现在对象的属性中
-let obj = {
-    name: "张三",
-    age:30
-}
-type Bar<T> = T extends {name:infer N,age:infer B} ? [N,B] :T;
-
-console.log(typeof obj); // [string,number]
-type test = Bar<typeof obj>;
-// type test = {
-//     name: string;
-//     age: number;
+// let obj = {
+//     name: "张三",
+//     age:30
 // }
+// // type Bar<T> = T extends {a:infer N,b:infer B} ? [N,B] :T;
+// // 产生协变会返回联合类型
+// type Bar<T> = T extends {name:infer U,age:infer U} ? U :T;// 协变
+// console.log(typeof obj); // [string,number]
+// type test = Bar<typeof obj>;
+// // type test = {
+// //     name: string;
+// //     age: number;
+// // }
+
+// 逆变出现函数的参数中
+type Bar<T> = T extends {
+    a:(x:infer U) => void;
+    b:(x:infer U) => void;
+} ? U : T;

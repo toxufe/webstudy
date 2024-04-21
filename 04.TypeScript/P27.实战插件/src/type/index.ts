@@ -9,6 +9,6 @@ export interface Data<T>{
 export interface StorageCls {
     get:<T>(key:Key)=>void;
     set:<T>(key:Key,value:T,expire:Expire)=>void;
-    remove:()=>void;
+    remove:(key:Key)=>void;
     clear:()=>void;
 }

@@ -1,3 +1,4 @@
+// expire 过期时间key permanent 永久不过期
 import { Dictionaries } from "../enum";
 export type Key = string;
 export interface StorageCls {

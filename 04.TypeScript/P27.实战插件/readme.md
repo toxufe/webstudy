@@ -7,3 +7,6 @@
 6. npm init -y package.json
 7. src平级新建rollup.config.js 作用：把ts打包成js
 8. tsc --init 生成tsconfig.json文件
+    - module 改成 ESNext
+    - moduleResolution node
+    - strict false

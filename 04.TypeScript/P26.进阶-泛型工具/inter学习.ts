@@ -2,8 +2,8 @@
 // infer 声明只能出现在 extends 的子语句中
 // infer 后边跟变量名
 // 获取promise的返回值
-// infer 协变
-// infer 逆变
+// infer 协变 对象 返回联合类型
+// infer 逆变 函数参数 返回交叉类型 never
 
 
 
@@ -38,15 +38,15 @@
 // //     age: number;
 // // }
 
-// 逆变出现函数的参数中 逆变返回的是交叉类型
-type Bar<T> = T extends {
-    a:(x:infer U) => void;
-    b:(x:infer U) => void;
-} ? U : never;
+// // 逆变出现函数的参数中 逆变返回的是交叉类型 
+// type Bar<T> = T extends {
+//     a:(x:infer U) => void;
+//     b:(x:infer U) => void;
+// } ? U : never;
 
-type T = Bar<{
-    a:(x:string) => void;
-    b:(x:number) => void;
-}>;
-// type T = never
+// type T = Bar<{
+//     a:(x:string) => void;
+//     b:(x:number) => void;
+// }>;
+// // type T = never
 

@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { } from "vue"
+import {useRouter} from 'vue-router'
+const router = useRouter()
 
+const toPage = (path: string) => {
+  // 字符串
+  router.push(path)
+}
 
 </script>
 
@@ -22,6 +28,10 @@ import { } from "vue"
 
   <h1>编程式导航</h1>
   <hr>
+  <div>
+    <button @click="toPage('/')">登录</button>
+    <button @click="toPage('/reg')">注册</button>
+  </div>
   <RouterView></RouterView>
 </template>
 

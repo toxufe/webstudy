@@ -27,10 +27,12 @@ const toDetail = (item: Item) => {
   // params可以传递字符串 vue 已经取消该方式
 
   // state可以传递对象
-  router.push({
-    name: 'Reg',
-    state: item
-  })
+  // router.push({
+  //   name: 'Reg',
+  //   state: item
+  // })
+
+  // 动态路由参数
 }
 
 

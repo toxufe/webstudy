@@ -17,6 +17,7 @@ const routes:Array<RouteRecordRaw> = [{
     path:'/reg/:id',
     name:'Reg',
     component:()=>import('../components/reg.vue'),
+    props:true
 }];
 
 const router = createRouter({

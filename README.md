@@ -1,4 +1,8 @@
 ## 学习笔记
+### vueRouter
+```
+npm init vite@lastest
+```
 ### importmap study
 ### 函数的二义性
 箭头函数和普通函数的区别，消除函数的二义性。

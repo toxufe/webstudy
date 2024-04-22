@@ -6,7 +6,11 @@ npm install vue-router -S
 ```
 ![alt text](<imgs/image copy 3.png>)
 
-
+vue2 mode history vue3 createWebHistory
+vue2 mode  hash  vue3  createWebHashHistory
+![alt text](<imgs/image copy 3.png>)
+location.hash
+vue2 mode abstact vue3  createMemoryHistory SSR 服务端渲染
 ### importmap study
 ### 函数的二义性
 箭头函数和普通函数的区别，消除函数的二义性。

@@ -21,8 +21,9 @@ const toPage2 = (name: string) => {
   <h1>路由学习</h1>
   <hr>
   <div>
-    <router-link to="/">登录</router-link>
-    <router-link to="/reg">注册</router-link>
+    <!-- replace 不会留下历史记录 -->
+    <router-link replace to="/">登录</router-link>
+    <router-link replace to="/reg">注册</router-link>
   </div>
 
 

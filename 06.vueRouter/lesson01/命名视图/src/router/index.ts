@@ -8,20 +8,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 // 命名视图
 
-const routes: Array<RouteRecordRaw> = [{
-    path: '/',
-    component: () => import('../components/footer.vue'),
-    children: [{
-        path: '',
-        name: 'Login',
-        component: () => import('../components/login.vue'),
-    }, {
-        path: 'reg/:id',
-        name: 'Reg',
-        component: () => import('../components/reg.vue'),
-        props: true
-    }]
-}];
+const routes: Array<RouteRecordRaw> = [{}];
 
 const router = createRouter({
     history: createWebHistory(),

@@ -3,9 +3,7 @@ import {} from "vue"
 </script>
 
 <template>
-  <h1>命名视图</h1>
-  <hr>
- <router-view></router-view>
+  <div class=""></div>
 </template>
 
 <style scoped></style>

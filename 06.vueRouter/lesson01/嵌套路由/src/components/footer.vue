@@ -3,9 +3,9 @@ import {} from "vue"
 </script>
 
 <template>
-  <h1>嵌套路由</h1>
-  <hr>
- <router-view></router-view>
+    <h1>我是父路由</h1>
+    <hr>
+    <router-view></router-view>
 </template>
 
 <style scoped></style>

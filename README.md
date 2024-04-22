@@ -4,6 +4,9 @@
 npm init vite@latest
 npm install vue-router -S
 ```
+![alt text](<imgs/image copy 3.png>)
+
+
 ### importmap study
 ### 函数的二义性
 箭头函数和普通函数的区别，消除函数的二义性。

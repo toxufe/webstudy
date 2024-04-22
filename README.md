@@ -1,7 +1,8 @@
 ## 学习笔记
 ### vueRouter
 ```
-npm init vite@lastest
+npm init vite@latest
+npm install vue-router -S
 ```
 ### importmap study
 ### 函数的二义性

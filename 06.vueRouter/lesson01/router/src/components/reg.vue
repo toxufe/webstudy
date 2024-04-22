@@ -7,6 +7,8 @@ console.log('route: ', route);
 const router = useRouter();
 
 const state = history.state
+
+defineProps<{id:number}>();
 </script>
 
 <template>
@@ -27,9 +29,16 @@ const state = history.state
   <p>name: {{ state.name }}</p>
   <p>price: {{ state.price }}</p> -->
 
-<h2>动态路由参数</h2>
+<!-- <h2>动态路由参数</h2>
 <hr>
   <p>id: {{ route.params.id }}</p>
+  <p>name: {{ route.params.name }}</p>
+  <p>price: {{ route.params.price }}</p> -->
+
+
+  <h2>动态路由参数 通过props 传递参数</h2>
+  <hr>
+  <p>id: {{id }}</p>
   <p>name: {{ route.params.name }}</p>
   <p>price: {{ route.params.price }}</p>
 

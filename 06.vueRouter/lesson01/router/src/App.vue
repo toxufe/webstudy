@@ -5,7 +5,14 @@ const router = useRouter()
 
 const toPage = (path: string) => {
   // 字符串
-  router.push(path)
+  // router.push(path)
+  // 对象
+  router.push({path:path})
+}
+
+const toPage2 = (name: string) => {
+  // 命名方式跳转
+  router.push({name:name})
 }
 
 </script>
@@ -31,6 +38,13 @@ const toPage = (path: string) => {
   <div>
     <button @click="toPage('/')">登录</button>
     <button @click="toPage('/reg')">注册</button>
+  </div>
+
+  <h1>编程式导航 -  命名方式跳转</h1>
+  <hr>
+  <div>
+    <button @click="toPage2('Login')">登录</button>
+    <button @click="toPage2('Reg')">注册</button>
   </div>
   <RouterView></RouterView>
 </template>

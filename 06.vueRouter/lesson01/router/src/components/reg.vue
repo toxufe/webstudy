@@ -21,11 +21,18 @@ const state = history.state
   <p>name: {{ route.query.name }}</p>
   <p>price: {{ route.query.price }}</p> -->
 
-  <h2>params 传参</h2>
+  <!-- <h2>params 传参</h2>
   <hr>
   <p>id: {{ state.id }}</p>
   <p>name: {{ state.name }}</p>
-  <p>price: {{ state.price }}</p>
+  <p>price: {{ state.price }}</p> -->
+
+<h2>动态路由参数</h2>
+<hr>
+  <p>id: {{ route.params.id }}</p>
+  <p>name: {{ route.params.name }}</p>
+  <p>price: {{ route.params.price }}</p>
+
 
 </template>
 

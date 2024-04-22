@@ -1,11 +1,12 @@
 ## 学习笔记
 ### vueRouter
+#### 安装
 ```
 npm init vite@latest
 npm install vue-router -S
 ```
-![alt text](<imgs/image copy 3.png>)
 
+#### 路由模式
 vue2 mode history vue3 createWebHistory
 vue2 mode  hash  vue3  createWebHashHistory
 ![alt text](<imgs/image copy 3.png>)

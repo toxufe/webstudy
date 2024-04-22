@@ -32,7 +32,11 @@ const toDetail = (item: Item) => {
   //   state: item
   // })
 
-  // 动态路由参数
+  // 动态路由参数 需要路由处设置
+  router.push({
+    name: 'Reg',
+    params: {id:item.id}
+  })
 }
 
 

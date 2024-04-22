@@ -14,7 +14,7 @@ const routes:Array<RouteRecordRaw> = [{
     name:'Login',
     component:()=>import('../components/login.vue'),
 },{
-    path:'/reg',
+    path:'/reg/:id',
     name:'Reg',
     component:()=>import('../components/reg.vue'),
 }];

@@ -1,6 +1,15 @@
 <script setup lang="ts">
 import {} from "vue"
 import {data} from './list.json'
+
+type Item = {
+  name: string;
+  price: string;
+  id: number;
+}
+
+
+
 </script>
 
 <template>

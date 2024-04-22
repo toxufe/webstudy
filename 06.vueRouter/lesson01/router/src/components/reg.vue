@@ -3,12 +3,13 @@ import {} from "vue"
 import { useRoute,useRouter } from "vue-router";
 // 取值的时候使用useRoute
 const route =  useRoute();
-console.log('route: ', route);
+// console.log('route: ', route);
 const router = useRouter();
 
-const state = history.state
+// const state = history.state
 
-defineProps<{id:number}>();
+const props = defineProps<{id:number}>();
+// console.log('props: ', props);
 </script>
 
 <template>

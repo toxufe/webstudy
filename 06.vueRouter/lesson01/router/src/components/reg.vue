@@ -3,15 +3,13 @@ import {} from "vue"
 </script>
 
 <template>
-  <div class="reg">Reg</div>
+  <h1>嘿嘿嘿 我是详情页面</h1>
+  <hr>
+  <p>id: {{ $route.params.id }}</p>
+  <p>name: {{ $route.query.name }}</p>
+  <p>price: {{ $route.query.price }}</p>
+  
 </template>
 
 <style scoped>
-.reg {
-    background: red;
-    width: 400px;
-    height: 400px;
-    color: #fff;
-
-}
 </style>

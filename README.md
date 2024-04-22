@@ -25,6 +25,13 @@ vue2 mode abstact vue3  createMemoryHistory SSR 服务端渲染
 #### 参数对象和导航对象
 this.\$route 是路由【参数对象】，所有路由中的参数， params, query 都属于它。
 this.\$router 是一个路由【导航对象】，用它 可以方便的 使用 JS 代码,实现路由的 前进、后退、 跳转到新的 URL 地址。
+
+#### params 传参接收不到参数
+通过查找资料，发现了原因。
+https://github.com/vuejs/router/blob/main/packages/router/CHANGELOG.md#414-2022-08-22
+由于之前的params传参在页面刷新之后，参数会丢失，所以vue将这种方法移除了。
+
+
 ### importmap study
 ### 函数的二义性
 箭头函数和普通函数的区别，消除函数的二义性。

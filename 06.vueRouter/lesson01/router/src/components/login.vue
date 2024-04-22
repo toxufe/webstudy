@@ -27,7 +27,7 @@ const toDetail = (item: Item) => {
   // params可以传递字符串
   router.push({
     name: 'Reg',
-    state:item
+    params: item
   })
 }
 

@@ -7,17 +7,20 @@ import {createRouter,createWebHistory,createWebHashHistory,RouteRecordRaw} from 
 //vue2 mode abstact vue3  createMemoryHistory SSR 服务端渲染
 
 
+// 命名是路由 name:"名字"
 
 const routes:Array<RouteRecordRaw> = [{
     path:'/',
+    name:'Login',
     component:()=>import('../components/login.vue'),
 },{
     path:'/reg',
+    name:'Reg',
     component:()=>import('../components/reg.vue'),
 }];
 
 const router = createRouter({
-    history:createWebHashHistory(),
+    history:createWebHistory(),
     routes
 });
 

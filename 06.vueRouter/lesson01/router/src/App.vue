@@ -11,6 +11,14 @@ import {} from "vue"
     <router-link to="/">登录</router-link>
     <router-link to="/reg">注册</router-link>
   </div>
+
+    
+    <h1>命名式导航</h1>
+    <hr>
+  <div>
+    <router-link :to="{name:'Login'}">登录</router-link>
+    <router-link :to="{name:'Reg'}">注册</router-link>
+  </div>
   <RouterView></RouterView>
 </template>
 

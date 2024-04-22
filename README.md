@@ -7,7 +7,7 @@ npm install vue-router -S
 ```
 
 #### 路由模式
-vue2 mode history vue3 createWebHistory
+
 vue2 mode  hash  vue3  createWebHashHistory
 ![alt text](<imgs/image copy 3.png>)
 location.hash
@@ -16,6 +16,9 @@ window.location.hash ='/reg'
 ```js
 window.addEventListener('hashchange',(e)=>{console.log(e)});
 ```
+
+vue2 mode history vue3 createWebHistory
+![alt text](<imgs/image copy 4.png>)
 
 vue2 mode abstact vue3  createMemoryHistory SSR 服务端渲染
 ### importmap study

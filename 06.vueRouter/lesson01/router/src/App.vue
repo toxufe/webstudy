@@ -5,7 +5,7 @@ import {} from "vue"
 <template>
   <h1>路由传参</h1>
   <hr>
-  <div></div>
+ <router-view></router-view>
 </template>
 
 <style scoped></style>

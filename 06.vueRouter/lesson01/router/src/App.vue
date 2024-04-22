@@ -3,6 +3,9 @@ import { } from "vue"
 import {useRouter} from 'vue-router'
 const router = useRouter()
 
+// router.go(1); 前进
+// router.back(); or router.go(-1) 后退
+
 
 // 编程式导航 不留下历史记录 使用router.replace();
 

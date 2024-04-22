@@ -3,7 +3,9 @@ import {} from "vue"
 </script>
 
 <template>
-  <div class="">1</div>
+  <h1>路由学习</h1>
+  <hr>
+  <RouterView></RouterView>
 </template>
 
 <style lang="scss" scoped></style>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {} from "vue"
+import {data} from './list.json'
 import { useRoute,useRouter } from "vue-router";
 // 取值的时候使用useRoute
 const route =  useRoute();
@@ -10,6 +11,9 @@ const router = useRouter();
 
 const props = defineProps<{id:number}>();
 // console.log('props: ', props);
+
+const item = data.find((e)=>e.id === props.id)
+console.log('item: ', item);
 </script>
 
 <template>
@@ -40,8 +44,8 @@ const props = defineProps<{id:number}>();
   <h2>动态路由参数 通过props 传递参数</h2>
   <hr>
   <p>id: {{id }}</p>
-  <p>name: {{ route.params.name }}</p>
-  <p>price: {{ route.params.price }}</p>
+  <p>name: {{ item?.name }}</p>
+  <p>price: {{ item?.price }}</p>
 
 
 </template>

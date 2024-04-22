@@ -1,4 +1,4 @@
-import {createRouter,createWebHistory,createWebHashHistory,RouteRecordRaw} from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 
 
@@ -9,19 +9,22 @@ import {createRouter,createWebHistory,createWebHashHistory,RouteRecordRaw} from 
 
 // 命名是路由 name:"名字"
 
-const routes:Array<RouteRecordRaw> = [{
-    path:'/',
-    name:'Login',
-    component:()=>import('../components/login.vue'),
-},{
-    path:'/reg/:id',
-    name:'Reg',
-    component:()=>import('../components/reg.vue'),
-    props:true
+const routes: Array<RouteRecordRaw> = [{
+    path: '/',
+    component: () => import('../components/footer.vue'),
+}, {
+    path: '/',
+    name: 'Login',
+    component: () => import('../components/login.vue'),
+}, {
+    path: '/reg/:id',
+    name: 'Reg',
+    component: () => import('../components/reg.vue'),
+    props: true
 }];
 
 const router = createRouter({
-    history:createWebHistory(),
+    history: createWebHistory(),
     routes
 });
 

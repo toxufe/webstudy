@@ -12,6 +12,10 @@ vue2 mode  hash  vue3  createWebHashHistory
 ![alt text](<imgs/image copy 3.png>)
 location.hash
 window.location.hash ='/reg'
+监听左右箭头
+```js
+window.addEventListener('hashchange',(e)=>{console.log(e)});
+```
 
 vue2 mode abstact vue3  createMemoryHistory SSR 服务端渲染
 ### importmap study

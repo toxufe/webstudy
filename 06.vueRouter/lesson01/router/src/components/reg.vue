@@ -12,7 +12,8 @@ const router = useRouter();
 const props = defineProps<{id:number}>();
 // console.log('props: ', props);
 
-const item = data.find((e)=>e.id === props.id)
+const item = data.find(v => v.id === Number(props.id))
+console.log('data: ', data);
 console.log('item: ', item);
 </script>
 

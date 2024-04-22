@@ -5,6 +5,8 @@ import { useRoute,useRouter } from "vue-router";
 const route =  useRoute();
 console.log('route: ', route);
 const router = useRouter();
+
+const state = history.state
 </script>
 
 <template>
@@ -21,9 +23,9 @@ const router = useRouter();
 
   <h2>params 传参</h2>
   <hr>
-  <p>id: {{ route.params.id }}</p>
-  <p>name: {{ route.params.name }}</p>
-  <p>price: {{ route.params.price }}</p>
+  <p>id: {{ state.id }}</p>
+  <p>name: {{ state.name }}</p>
+  <p>price: {{ state.price }}</p>
 
 </template>
 

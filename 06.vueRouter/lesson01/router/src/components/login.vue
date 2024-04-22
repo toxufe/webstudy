@@ -24,10 +24,12 @@ const toDetail = (item: Item) => {
   //   query: item
   // })
 
-  // params可以传递字符串
+  // params可以传递字符串 vue 已经取消该方式
+
+  // state可以传递对象
   router.push({
     name: 'Reg',
-    params: item
+    state: item
   })
 }
 

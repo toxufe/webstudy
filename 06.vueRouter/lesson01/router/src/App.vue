@@ -3,6 +3,9 @@ import { } from "vue"
 import {useRouter} from 'vue-router'
 const router = useRouter()
 
+
+// 编程式导航 不留下历史记录 使用router.replace();
+
 const toPage = (path: string) => {
   // 字符串
   // router.push(path)

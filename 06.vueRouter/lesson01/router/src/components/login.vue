@@ -13,6 +13,8 @@ type Item = {
 /**
  * query 传参是在url上显示的
  * createWebHashHistory 模式下会在url上显示参数
+ * 
+ * params 传参是在url上不显示的 数据存在内存中
  */
 
 const toDetail = (item: Item) => {

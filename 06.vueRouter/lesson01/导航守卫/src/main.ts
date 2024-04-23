@@ -20,6 +20,7 @@ app.use(ElementUi);
 // 路由中间件 路由前置守卫 授权登录使用
 const whiteList = ['/'];
 router.beforeEach((to, from, next) => {
+    console.log('to: ', to);
     Vnode.component?.exposed?.startLoading()
     if(whiteList.includes(to.path) || localStorage.getItem('token')) {
         next();

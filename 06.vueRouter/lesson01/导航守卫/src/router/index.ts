@@ -4,11 +4,19 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        component: () => import('@/components/Login.vue')
+        component: () => import('@/components/Login.vue'),
+        // 路由元信息
+        meta:{
+            title:"登录页面"
+        }
     },
     {
         path:'/index',
-        component: () => import('@/components/Index.vue')
+        component: () => import('@/components/Index.vue'),
+        // 路由元信息
+        meta:{
+            title:"首页"
+        }
     }
     
 ];

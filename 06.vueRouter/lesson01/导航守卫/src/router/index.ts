@@ -38,6 +38,10 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     // 创建 Router实例，滚动行为，可以提供一个方法 scrollBehavior
+
+//     发现添加路由后并没有起作用，查询资料发现
+// 作者在issues中说vue-router不再支持这个特性了。
+// https://github.com/vuejs/vue-router/issues/675
     scrollBehavior:(to, from, savedPosition) =>{
         console.log('savedPosition: ', savedPosition);
         // return 期望滚动到哪个的位置

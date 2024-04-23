@@ -1,5 +1,14 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
+
+
+// 声明meta类型
+declare module 'vue-router' {
+    interface RouteMeta {
+        title: string
+    }
+}
+
 // 路由守卫
 const routes: Array<RouteRecordRaw> = [
     {

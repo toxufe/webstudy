@@ -21,6 +21,7 @@ app.use(ElementUi);
 const whiteList = ['/'];
 router.beforeEach((to, from, next) => {
     console.log('to: ', to);
+    document.title = to.meta.title;
     Vnode.component?.exposed?.startLoading()
     if(whiteList.includes(to.path) || localStorage.getItem('token')) {
         next();

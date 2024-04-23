@@ -2,6 +2,10 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 // 路由守卫
 const routes: Array<RouteRecordRaw> = [
+    {
+        path: '/',
+        component: () => import('@/components/Login.vue')
+    }
     
 ];
 

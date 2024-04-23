@@ -15,11 +15,13 @@ const routes: Array<RouteRecordRaw> = [
          // 路由重定向
         // redirect: '/user1',
         // redirect: { path: 'user1' },
-        redirect: to => {
-            console.log('to: ', to);
-            return '/user1';
-        },
+        // redirect: to => {
+        //     console.log('to: ', to);
+        //     // return '/user1';
+        //     return {path: 'user1',query:{id:1}};
+        // },
 
+        // 路由别名
         children: [
             {
                 path: 'user1',

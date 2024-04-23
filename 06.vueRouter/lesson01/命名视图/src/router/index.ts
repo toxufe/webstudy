@@ -10,9 +10,16 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        // 路由重定向
+       
         component: () => import('../components/root.vue'),
-        redirect: '/user1',
+         // 路由重定向
+        // redirect: '/user1',
+        // redirect: { path: 'user1' },
+        redirect: to => {
+            console.log('to: ', to);
+            return '/user1';
+        },
+
         children: [
             {
                 path: 'user1',

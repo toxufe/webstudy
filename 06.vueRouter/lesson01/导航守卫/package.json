@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "element-plus": "^2.7.1",
-    "scss": "^0.2.4",
+    "sass": "^1.75.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"
   },

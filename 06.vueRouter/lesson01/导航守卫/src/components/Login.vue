@@ -3,7 +3,14 @@ import {} from "vue"
 </script>
 
 <template>
-  <div class="">222</div>
+  <div class="login">111</div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.login {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>

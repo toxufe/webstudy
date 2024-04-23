@@ -2,7 +2,7 @@
 
 ### 前端组件
 npm install element-plus --save
-npm install scss --save
+npm install sass --save
 ### vueRouter
 #### 安装
 ```

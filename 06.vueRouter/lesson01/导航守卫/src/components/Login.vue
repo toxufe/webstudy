@@ -42,6 +42,7 @@ const onSubmit = ()=>{
 </script>
 
 <template>
+  <div style="background: #000;color: #fff;font-size: 60px; height: 1000px;">测试滚动行为</div>
   <div class="login">
     <el-card class="box-card ">
      <el-form ref="form" :model="formData" :rules="rules" label-width="80px">

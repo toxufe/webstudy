@@ -5,6 +5,10 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         component: () => import('@/components/Login.vue')
+    },
+    {
+        path:'/index',
+        component: () => import('@/components/Index.vue')
     }
     
 ];

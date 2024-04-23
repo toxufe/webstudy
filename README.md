@@ -7,6 +7,10 @@ npm install sass --save
 
 #### javascript 动画
 ![alt text](<imgs/image copy 5.png>)
+
+### 组件转成Vnode
+creatVnode
+render
 ### vueRouter
 #### 安装
 ```

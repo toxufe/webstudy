@@ -4,6 +4,9 @@
 ### 前端组件
 npm install element-plus --save
 npm install sass --save
+
+#### javascript 动画
+![alt text](<imgs/image copy 5.png>)
 ### vueRouter
 #### 安装
 ```

@@ -3,7 +3,7 @@ import {} from "vue"
 </script>
 
 <template>
-  <div class="">登录成功</div>
+  <h1 style="padding-top: 100px;" class="">登录成功</h1>
 </template>
 
 <style scoped></style>

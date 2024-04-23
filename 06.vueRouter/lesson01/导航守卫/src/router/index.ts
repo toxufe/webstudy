@@ -5,7 +5,8 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 // 声明meta类型
 declare module 'vue-router' {
     interface RouteMeta {
-        title: string
+        title: string,
+        transition:string
     }
 }
 
@@ -18,7 +19,8 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/components/Login.vue'),
         // 路由元信息
         meta:{
-            title:"登录页面"
+            title:"登录页面",
+            transition:"animate__fadeIn"
         }
     },
     {
@@ -26,7 +28,8 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/components/Index.vue'),
         // 路由元信息
         meta:{
-            title:"首页"
+            title:"首页",
+            transition:"animate__bounceIn"
         }
     }
     

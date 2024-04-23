@@ -3,7 +3,7 @@ import {} from "vue"
 </script>
 
 <template>
-  <div class="">111</div>
+  <div class="">登录成功</div>
 </template>
 
 <style scoped></style>

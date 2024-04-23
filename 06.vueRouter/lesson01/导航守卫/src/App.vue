@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {} from "vue"
-import loadingBar from '@/components/loadingBar.vue'
+// import loadingBar from '@/components/loadingBar.vue'
 </script>
 
 <template>
-  <loadingBar />
+  <!-- <loadingBar /> -->
   <!-- <h1>导航守卫</h1>
   <hr> -->
  <router-view></router-view>

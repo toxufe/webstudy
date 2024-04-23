@@ -1,5 +1,6 @@
 ## 学习笔记
-
+### javascript 设计模式之一
+#### 策略模式
 ### 前端组件
 npm install element-plus --save
 npm install sass --save

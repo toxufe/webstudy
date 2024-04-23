@@ -1,9 +1,13 @@
-import { createApp } from 'vue'
+import { createApp,createVNode } from 'vue'
 // import './style.css'
 import App from './App.vue'
 import router from './router'
 import ElementUi from 'element-plus'
 import 'element-plus/dist/index.css'
+import loadingBar from '@/components/loadingBar.vue'
+console.log('loadingBar: ', loadingBar);
+const Vnode = createVNode(loadingBar);
+console.log('Vnode: ', Vnode);
 
 
 const app = createApp(App);

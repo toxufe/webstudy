@@ -4,6 +4,7 @@
 ### 前端组件
 npm install element-plus --save
 npm install sass --save
+npm install animate.css -S
 
 #### javascript 动画
 ![alt text](<imgs/image copy 5.png>)

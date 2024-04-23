@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import {} from "vue"
 </script>
 
 <template>
-  <div class=""></div>
+  <div class="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 </template>
 
 <style scoped></style>

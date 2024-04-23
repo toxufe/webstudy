@@ -9,6 +9,8 @@ declare module 'vue-router' {
     }
 }
 
+// 路由过度的动态效果
+
 // 路由守卫
 const routes: Array<RouteRecordRaw> = [
     {

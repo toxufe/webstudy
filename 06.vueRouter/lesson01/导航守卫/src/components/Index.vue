@@ -3,7 +3,7 @@ import {} from "vue"
 </script>
 
 <template>
-  <div class="">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+  <div class=""></div>
 </template>
 
 <style scoped></style>

@@ -6,4 +6,4 @@ import {} from "vue"
   <div class="">222</div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

@@ -1,4 +1,7 @@
 ## 学习笔记
+
+### 前端组件
+npm install element-plus --save
 ### vueRouter
 #### 安装
 ```

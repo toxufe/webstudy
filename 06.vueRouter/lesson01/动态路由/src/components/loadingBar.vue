@@ -53,7 +53,7 @@ defineExpose({
         position: fixed;
         top:0;
         width: 100%;
-        height: 10px;
+        height: 1px;
         .bar {
             height: inherit;
             width:0;

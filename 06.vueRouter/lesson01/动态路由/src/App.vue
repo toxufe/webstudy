@@ -8,12 +8,12 @@ import {} from "vue"
   <!-- <loadingBar /> -->
   <!-- <h1>导航守卫</h1>
   <hr> -->
- <!-- <router-view #default="{route,Component}">
+ <router-view #default="{route,Component}">
   <transition :enter-active-class="`animate__animated ${route.meta.transition}`">
     <component :is="Component" />
   </transition>
- </router-view> -->
- <router-view></router-view>
+ </router-view>
+ <!-- <router-view></router-view> -->
 </template>
 
 <style>
@@ -25,8 +25,5 @@ import {} from "vue"
 html,body,#app {
   height: 100%;
   overflow: hidden;
-}
-#app {
-  overflow: scroll;
 }
 </style>

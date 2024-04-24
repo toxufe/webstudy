@@ -1,4 +1,8 @@
 ## 学习笔记
+## 问题
+ERR_UNKNOWN_FILE_EXTENSION
+包错信息：CTypeError: Unknown file extension ".ts" for
+解决方案：在 package.json 文件中将 【type:“module”】删除，注意将此代码注释是不可以解决这个问题的，必须要注释
 ### javascript 设计模式之一
 #### 策略模式
 ### 前端组件

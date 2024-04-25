@@ -13,3 +13,7 @@
 ## typescript
 - npm i typescript -g
 - tsc -w 实时编译ts文件
+
+
+## monorepo 架构
+- npm i pnpm -g

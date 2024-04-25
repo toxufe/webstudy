@@ -15,7 +15,7 @@ window.onload = ()=>{
             return this.getAttribute(attr);
         }
 
-        // 声明周期
+        // 声明周期 
     }
 
     // 挂载 不支持驼峰命名

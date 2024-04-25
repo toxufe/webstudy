@@ -8,3 +8,8 @@
 - 无界微前端方案
 
 ## webComponts
+
+
+## typescript
+- npm i typescript -g
+- tsc -w 实时编译ts文件

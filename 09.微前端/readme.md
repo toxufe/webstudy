@@ -24,3 +24,7 @@
 - 软连接 符号链接 mklink ruan.js index.js 需要管理员的权限  快捷方式
 - 硬链接 mklink /H ying.js index.js   (硬链接文文件，原文件)
     共享一个内存地址，因此内容是一模一样的
+
+#### 创建项目
+- pnpm init
+- pnpm i vue

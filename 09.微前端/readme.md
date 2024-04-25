@@ -17,3 +17,4 @@
 
 ## monorepo 架构
 - npm i pnpm -g
+- pnpm -v

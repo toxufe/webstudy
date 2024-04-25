@@ -18,3 +18,5 @@
 ## monorepo 架构
 - npm i pnpm -g
 - pnpm -v
+
+### pnpm 优势

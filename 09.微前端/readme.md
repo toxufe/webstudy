@@ -21,8 +21,9 @@
 
 ### pnpm 优势
 - pnpm官网优势
-- 软连接 符号链接 mklink ruan.js index.js 需要管理员的权限  快捷方式
-- 硬链接 mklink /H ying.js index.js   (硬链接文文件，原文件)
+- 只有一个仓库链接 组件 软连接 硬链接 组件中心
+- 软连接 符号链接 mklink ruan.js index.js 需要管理员的权限  快捷方式  ln -s
+- 硬链接 mklink /H ying.js index.js   (硬链接文文件，原文件)   ln
     共享一个内存地址，因此内容是一模一样的
 
 #### 创建项目

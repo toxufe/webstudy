@@ -5,6 +5,8 @@ window.onload = ()=>{
 
             // 创建shadowdom 样式隔离
             let dom = this.attachShadow({mode:'open'});
+            let wujie = document.querySelector("#wujie") as HTMLTemplateElement;
+            dom.appendChild(wujie.content.cloneNode(true));
         }
     }
 

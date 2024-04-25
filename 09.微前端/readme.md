@@ -18,6 +18,8 @@
 ## monorepo 架构
 - npm i pnpm -g
 - pnpm -v
+- npm init vue
+
 
 ### pnpm 优势
 - pnpm官网优势
@@ -27,6 +29,7 @@
     共享一个内存地址，因此内容是一模一样的
 - pnpm store path 查看组件中心
 - 命令
+- pnpm import 转成自用的软件管理包格式
 
 #### 创建项目
 - pnpm init

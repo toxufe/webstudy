@@ -21,4 +21,4 @@
 
 ### pnpm 优势
 - 软连接
-- 硬链接
+- 硬链接 mklink /H ying.js index.js   (硬链接文文件，原文件)

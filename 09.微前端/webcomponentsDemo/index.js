@@ -7,6 +7,10 @@ window.onload = () => {
             let dom = this.attachShadow({ mode: 'open' });
             let wujie = document.querySelector("#wujie");
             dom.appendChild(wujie.content.cloneNode(true));
+            console.log(this.getAttr('age'), this.getAttr('name'));
+        }
+        getAttr(attr) {
+            return this.getAttribute(attr);
         }
     }
     // 挂载 不支持驼峰命名

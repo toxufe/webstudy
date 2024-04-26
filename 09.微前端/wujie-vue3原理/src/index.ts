@@ -1,6 +1,7 @@
-import { defineComponent, h } from 'vue';
-import type {PropType} from 'vue';
+import { defineComponent, h,getCurrentInstance } from 'vue';
+import type { PropType } from 'vue';
 import { Props } from './type';
+import { startApp } from 'wujie'
 
 
 const wujie = defineComponent({
@@ -27,7 +28,35 @@ const wujie = defineComponent({
         activated: { type: Function as PropType<Props['activated']>, default: null },
         deactivated: { type: Function as PropType<Props['deactivated']>, default: null },
     },
-    setup() {
+    setup(props) {
+        // vue2 this.$refs.wujie
+        const instance = getCurrentInstance();
+        const init = () => {
+            startApp({
+                name: props.name,
+                url: props.url,
+                el: instance?.refs.wujie as HTMLElement,
+                loading: props.loading,
+                alive: props.alive,
+                fetch: props.fetch,
+                props: props.props,
+                attrs: props.attrs,
+                replace: props.replace,
+                sync: props.sync,
+                prefix: props.prefix,
+                fiber: props.fiber,
+                degrade: props.degrade,
+                plugins: props.plugins,
+                beforeLoad: props.beforeLoad,
+                beforeMount: props.beforeMount,
+                afterMount: props.afterMount,
+                beforeUnmount: props.beforeUnmount,
+                afterUnmount: props.afterUnmount,
+                activated: props.activated,
+                deactivated: props.deactivated,
+
+            });
+        }
         return () => h('div', {
             style: {},
             ref: "wujie",// 方便之后读取

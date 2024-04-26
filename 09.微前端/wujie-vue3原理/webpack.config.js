@@ -11,6 +11,12 @@ const config = {
         filename:"index.js",
         path:path.resolve(__dirname,'lib')
     },
+    // 给Cdn使用的
+    externals:{
+        vue:'vue',
+        wujie:'wujie'
+
+    },
     module:{
         rules:[
             {

@@ -55,6 +55,14 @@ pnpm版本不一直需要设置.nmprc
 link-workspace-packages=true
 save-workspace-protocol=true
 
+
+###  无界入门
+官网
+https://wujie-micro.github.io/doc
+cd main
+pnpm i wujie
+
+
  
 
 
@@ -78,6 +86,4 @@ save-workspace-protocol=true
 
 ## 扁平???
 
-## 无界入门
-官网
-https://wujie-micro.github.io/doc/
+

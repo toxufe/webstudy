@@ -1,4 +1,4 @@
-import { defineComponent, h,getCurrentInstance,onMounted } from 'vue';
+import { defineComponent, h,getCurrentInstance,onMounted,watch } from 'vue';
 import type { PropType } from 'vue';
 import { Props } from './type';
 import { startApp } from 'wujie'
@@ -62,7 +62,10 @@ const wujie = defineComponent({
         onMounted(()=>{
             init();
         });
-        // name 和 url  是动态绑定
+        // name 和 url 是动态绑定,值改变之后需要重载
+        watch([props.name,props.url],()=>{
+            init();
+        });
 
         
         return () => h('div', {

@@ -78,6 +78,9 @@ pnpm i webpack webpack-cli -D
 pnpm i typescript -D
 pnpm i ts-loader -D
 
+新技术 swc 提升打包性能
+
+
 
 使用setup函数模式 需要引入defineComponent
 

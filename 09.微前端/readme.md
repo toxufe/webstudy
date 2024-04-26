@@ -38,6 +38,9 @@ pnpn i
 // 根目录下执行 子应用
 pnpm -F react-demo dev
 
+
+
+可以复用子模块
 common 文件夹
 pnpm init
 09.微前端/monorepo架构/pnpm-workspace.yaml 

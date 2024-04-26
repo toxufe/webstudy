@@ -56,6 +56,9 @@ importers:
 
   web/react-demo:
     dependencies:
+      common:
+        specifier: workspace:^1.0.0
+        version: link:../../common
       react:
         specifier: ^18.2.0
         version: 18.3.0
@@ -96,6 +99,9 @@ importers:
 
   web/vue-demo:
     dependencies:
+      common:
+        specifier: workspace:^1.0.0
+        version: link:../../common
       vue:
         specifier: ^3.4.21
         version: 3.4.25(typescript@5.4.5)

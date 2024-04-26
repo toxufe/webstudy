@@ -87,4 +87,8 @@ const wujie = defineComponent({
     }
 }); 
 
-export default wujie;
+wujie.install = function (app:any){
+    app.component('WuJieVue',wujie);
+}
+
+export default wujie; 

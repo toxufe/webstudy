@@ -41,44 +41,185 @@ module.exports = wujie;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-var exports = __webpack_exports__;
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var wujie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var wujie__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(wujie__WEBPACK_IMPORTED_MODULE_1__);
+function _array_like_to_array(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+    for(var i = 0, arr2 = new Array(len); i < len; i++)arr2[i] = arr[i];
+    return arr2;
+}
+function _array_without_holes(arr) {
+    if (Array.isArray(arr)) return _array_like_to_array(arr);
+}
+function _iterable_to_array(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
+function _non_iterable_spread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _to_consumable_array(arr) {
+    return _array_without_holes(arr) || _iterable_to_array(arr) || _unsupported_iterable_to_array(arr) || _non_iterable_spread();
+}
+function _unsupported_iterable_to_array(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _array_like_to_array(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(n);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _array_like_to_array(o, minLen);
+}
 
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-const vue_1 = __webpack_require__(1);
-const wujie_1 = __webpack_require__(2);
-const wujie = (0, vue_1.defineComponent)({
+
+var wujie = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
     props: {
-        width: { type: String, default: "" },
-        height: { type: String, default: "" }, name: { type: String, default: "", required: true },
-        loading: { type: HTMLElement, default: undefined },
-        url: { type: String, default: "", required: true },
-        sync: { type: Boolean, default: undefined },
-        prefix: { type: Object, default: undefined },
-        alive: { type: Boolean, default: undefined },
-        props: { type: Object, default: undefined },
-        attrs: { type: Object, default: undefined },
-        replace: { type: Function, default: undefined },
-        fetch: { type: Function, default: undefined },
-        fiber: { type: Boolean, default: undefined },
-        degrade: { type: Boolean, default: undefined },
-        plugins: { type: Array, default: null },
-        beforeLoad: { type: Function, default: null },
-        beforeMount: { type: Function, default: null },
-        afterMount: { type: Function, default: null },
-        beforeUnmount: { type: Function, default: null },
-        afterUnmount: { type: Function, default: null },
-        activated: { type: Function, default: null },
-        deactivated: { type: Function, default: null },
+        width: {
+            type: String,
+            default: ""
+        },
+        height: {
+            type: String,
+            default: ""
+        },
+        name: {
+            type: String,
+            default: "",
+            required: true
+        },
+        loading: {
+            type: HTMLElement,
+            default: undefined
+        },
+        url: {
+            type: String,
+            default: "",
+            required: true
+        },
+        sync: {
+            type: Boolean,
+            default: undefined
+        },
+        prefix: {
+            type: Object,
+            default: undefined
+        },
+        alive: {
+            type: Boolean,
+            default: undefined
+        },
+        props: {
+            type: Object,
+            default: undefined
+        },
+        attrs: {
+            type: Object,
+            default: undefined
+        },
+        replace: {
+            type: Function,
+            default: undefined
+        },
+        fetch: {
+            type: Function,
+            default: undefined
+        },
+        fiber: {
+            type: Boolean,
+            default: undefined
+        },
+        degrade: {
+            type: Boolean,
+            default: undefined
+        },
+        plugins: {
+            type: Array,
+            default: null
+        },
+        beforeLoad: {
+            type: Function,
+            default: null
+        },
+        beforeMount: {
+            type: Function,
+            default: null
+        },
+        afterMount: {
+            type: Function,
+            default: null
+        },
+        beforeUnmount: {
+            type: Function,
+            default: null
+        },
+        afterUnmount: {
+            type: Function,
+            default: null
+        },
+        activated: {
+            type: Function,
+            default: null
+        },
+        deactivated: {
+            type: Function,
+            default: null
+        }
     },
-    setup(props, { emit }) {
+    setup: function setup(props, param) {
+        var emit = param.emit;
         // vue2 this.$refs.wujie
-        const instance = (0, vue_1.getCurrentInstance)();
-        const init = () => {
+        var instance = (0,vue__WEBPACK_IMPORTED_MODULE_0__.getCurrentInstance)();
+        var init = function() {
             // 微前端初始化方法就可以了
-            (0, wujie_1.startApp)({
+            (0,wujie__WEBPACK_IMPORTED_MODULE_1__.startApp)({
                 name: props.name,
                 url: props.url,
                 el: instance === null || instance === void 0 ? void 0 : instance.refs.wujie,
@@ -99,36 +240,46 @@ const wujie = (0, vue_1.defineComponent)({
                 beforeUnmount: props.beforeUnmount,
                 afterUnmount: props.afterUnmount,
                 activated: props.activated,
-                deactivated: props.deactivated,
+                deactivated: props.deactivated
             });
         };
-        const eventHandler = (eventname, ...args) => {
-            emit(eventname, ...args);
+        var eventHandler = function(eventname) {
+            for(var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++){
+                args[_key - 1] = arguments[_key];
+            }
+            emit.apply(void 0, [
+                eventname
+            ].concat(_to_consumable_array(args)));
         };
-        (0, vue_1.onMounted)(() => {
-            wujie_1.bus.$onAll(eventHandler);
+        (0,vue__WEBPACK_IMPORTED_MODULE_0__.onMounted)(function() {
+            wujie__WEBPACK_IMPORTED_MODULE_1__.bus.$onAll(eventHandler);
             init();
         });
-        (0, vue_1.onBeforeUnmount)(() => {
-            wujie_1.bus.$offAll(eventHandler);
+        (0,vue__WEBPACK_IMPORTED_MODULE_0__.onBeforeUnmount)(function() {
+            wujie__WEBPACK_IMPORTED_MODULE_1__.bus.$offAll(eventHandler);
         });
         // name 和 url 是动态绑定,值改变之后需要重载
-        (0, vue_1.watch)([props.name, props.url], () => {
+        (0,vue__WEBPACK_IMPORTED_MODULE_0__.watch)([
+            props.name,
+            props.url
+        ], function() {
             init();
         });
-        return () => (0, vue_1.h)('div', {
-            style: {
-                width: props.width,
-                height: props.height
-            },
-            ref: "wujie", // 方便之后读取
-        });
+        return function() {
+            return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)('div', {
+                style: {
+                    width: props.width,
+                    height: props.height
+                },
+                ref: "wujie"
+            });
+        };
     }
 });
-wujie.install = function (app) {
+wujie.install = function(app) {
     app.component('WuJieVue', wujie);
 };
-exports["default"] = wujie;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (wujie);
 
 })();
 

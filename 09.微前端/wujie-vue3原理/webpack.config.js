@@ -21,7 +21,8 @@ const config = {
         rules:[
             {
                 test:/\.ts$/,
-                use:'ts-loader'
+                // use:'ts-loader'// 1800
+                use:'swc-loader'// 201
             }
         ]
     }

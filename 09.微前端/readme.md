@@ -20,7 +20,10 @@
 - pnpm -v
 - npm init vue
 - npm init vite
-    - 
+    - vue-demo vue typescript
+- npm init vite
+    - react-demo React typescript
+
 
 
 ### pnpm 优势

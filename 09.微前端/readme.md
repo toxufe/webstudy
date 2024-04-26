@@ -19,6 +19,8 @@
 - npm i pnpm -g
 - pnpm -v
 - npm init vue
+- npm init vite
+    - 
 
 
 ### pnpm 优势

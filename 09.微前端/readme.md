@@ -40,6 +40,9 @@ pnpm -F react-demo dev
 
 common 文件夹
 pnpm init
+09.微前端/monorepo架构/pnpm-workspace.yaml 
+添加common配置
+pnpm i axios
  
 
 

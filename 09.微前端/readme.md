@@ -79,6 +79,8 @@ pnpm i typescript -D
 pnpm i ts-loader -D
 
 
+使用setup函数模式 需要引入defineComponent
+
 ### pnpm 优势
 - pnpm官网优势
 - 只有一个仓库链接 组件 软连接 硬链接 组件中心

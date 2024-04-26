@@ -18,12 +18,19 @@
 ## monorepo 架构
 - npm i pnpm -g
 - pnpm -v
-- npm init vue
-- npm init vite
+- main 主应用 npm init vue
+- 子应用 npm init vite
     - vue-demo vue typescript
-- npm init vite
+- 子应用 npm init vite
     - react-demo React typescript
 
+安装依赖
+npm 每个里边都需要安装
+monorepo 架构
+项目最外层可以安装依赖
+pnpm init
+
+ 
 
 
 ### pnpm 优势

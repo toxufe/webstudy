@@ -73,6 +73,10 @@ tsc init
 webpack.config.js
 
 pnpm i wujie
+pnpm i vue -D
+pnpm i webpack webpack-cli -D
+pnpm i typescript -D
+pnpm i ts-loader -D
 
 
 ### pnpm 优势

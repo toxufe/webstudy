@@ -25,6 +25,9 @@ importers:
       vue-router:
         specifier: ^4.3.0
         version: 4.3.2(vue@3.4.25(typescript@5.4.5))
+      wujie-vue-setup-test01:
+        specifier: ^0.0.1
+        version: 0.0.1
       wujie-vue3:
         specifier: ^1.0.22
         version: 1.0.22(vue@3.4.25(typescript@5.4.5))
@@ -1469,6 +1472,9 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
+  wujie-vue-setup-test01@0.0.1:
+    resolution: {integrity: sha512-01pn0OjQ4U06j3m0SB3LenzYmOtWXCVNGH4FFM0Q0xSR+KWCqDHJs6yDz6i5My4ED0cqlvo5IpRugogdTm5OWg==}
+
   wujie-vue3@1.0.22:
     resolution: {integrity: sha512-/FD52+3rEg4vQb6EhSq+V9WMhaHYyVliUsVDBIzePcX0yUsep+4oC8r3EmyeS2dfEl3DCmMwLz5MnBGL3c4Msw==}
     peerDependencies:
@@ -2823,6 +2829,10 @@ snapshots:
       isexe: 2.0.0
 
   wrappy@1.0.2: {}
+
+  wujie-vue-setup-test01@0.0.1:
+    dependencies:
+      wujie: 1.0.22
 
   wujie-vue3@1.0.22(vue@3.4.25(typescript@5.4.5)):
     dependencies:

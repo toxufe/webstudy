@@ -1,4 +1,4 @@
-import { defineComponent, h,getCurrentInstance } from 'vue';
+import { defineComponent, h,getCurrentInstance,onMounted } from 'vue';
 import type { PropType } from 'vue';
 import { Props } from './type';
 import { startApp } from 'wujie'
@@ -32,6 +32,7 @@ const wujie = defineComponent({
         // vue2 this.$refs.wujie
         const instance = getCurrentInstance();
         const init = () => {
+            // 微前端初始化方法就可以了
             startApp({
                 name: props.name,
                 url: props.url,
@@ -57,6 +58,13 @@ const wujie = defineComponent({
 
             });
         }
+
+        onMounted(()=>{
+            init();
+        });
+        // name 和 url  是动态绑定
+
+        
         return () => h('div', {
             style: {},
             ref: "wujie",// 方便之后读取

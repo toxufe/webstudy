@@ -43,6 +43,10 @@ pnpm init
 09.微前端/monorepo架构/pnpm-workspace.yaml 
 添加common配置
 pnpm i axios
+
+main 应用
+cd main 
+pnpm -F main add common
  
 
 

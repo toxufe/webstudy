@@ -1,7 +1,7 @@
 import { defineComponent, h,getCurrentInstance,onMounted,watch } from 'vue';
 import type { PropType } from 'vue';
 import { Props } from './type';
-import { startApp } from 'wujie'
+import { startApp ,bus} from 'wujie'
 
 
 const wujie = defineComponent({
@@ -28,7 +28,7 @@ const wujie = defineComponent({
         activated: { type: Function as PropType<Props['activated']>, default: null },
         deactivated: { type: Function as PropType<Props['deactivated']>, default: null },
     },
-    setup(props) {
+    setup(props,{emit}) {
         // vue2 this.$refs.wujie
         const instance = getCurrentInstance();
         const init = () => {
@@ -59,7 +59,12 @@ const wujie = defineComponent({
             });
         }
 
+        const eventHandler = (eventname:string,...args:any)=>{
+            emit(eventname,...args);
+        }
+
         onMounted(()=>{
+            bus.$onAll(eventHandler);
             init();
         });
         // name 和 url 是动态绑定,值改变之后需要重载

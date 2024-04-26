@@ -13,7 +13,8 @@
   "dependencies": {
     "common": "workspace:^1.0.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "wujie-vue3": "^1.0.22"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",

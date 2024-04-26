@@ -60,7 +60,8 @@ save-workspace-protocol=true
 官网
 https://wujie-micro.github.io/doc
 cd main
-pnpm i wujie
+del pnpm i wujie
+npm i wujie-vue3 -S
 
 
  

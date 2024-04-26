@@ -83,7 +83,7 @@ pnpm i -D @swc/core swc-loader
 swc 底层 rust
 
 esm 格式打包
-npm install -D @swc/cli
+pnpm install -D @swc/cli
 
 
 

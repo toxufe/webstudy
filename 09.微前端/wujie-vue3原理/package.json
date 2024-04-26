@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lib":"webpack"
+    "lib": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,8 @@
     "wujie": "^1.0.22"
   },
   "devDependencies": {
+    "@swc/core": "^1.5.0",
+    "swc-loader": "^0.2.6",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.5",
     "vue": "^3.4.25",

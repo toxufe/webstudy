@@ -1,13 +1,19 @@
 {
-  "name": "wujie-vue3原理",
+  "name": "wujie-vue-setup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "esm/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lib": "webpack",
     "esm": "swc src/index.ts -d esm"
   },
+  "files": [
+    "lib",
+    "esm",
+    "index.d.ts"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC", 

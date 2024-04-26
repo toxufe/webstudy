@@ -86,10 +86,19 @@ esm 格式打包
 pnpm install -D @swc/cli
 
 
-
-
 使用setup函数模式 需要引入defineComponent
 
+#### 发布到npm
+设置版本号
+设置files:[]
+"main": "lib/index.js",
+"files": [
+"lib",
+"esm",
+"index.d.ts"
+],
+"main": "lib/index.js",
+"module": "esm/src/index.js",
 ### pnpm 优势
 - pnpm官网优势
 - 只有一个仓库链接 组件 软连接 硬链接 组件中心

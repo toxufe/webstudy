@@ -1,17 +1,27 @@
-/******/ (() => { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("vue"), require("wujie"));
+	else if(typeof define === 'function' && define.amd)
+		define("wujievue", ["vue", "wujie"], factory);
+	else if(typeof exports === 'object')
+		exports["wujievue"] = factory(require("vue"), require("wujie"));
+	else
+		root["wujievue"] = factory(root["vue"], root["wujie"]);
+})(self, (__WEBPACK_EXTERNAL_MODULE__1__, __WEBPACK_EXTERNAL_MODULE__2__) => {
+return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
 /***/ ((module) => {
 
-module.exports = vue;
+module.exports = __WEBPACK_EXTERNAL_MODULE__1__;
 
 /***/ }),
 /* 2 */
 /***/ ((module) => {
 
-module.exports = wujie;
+module.exports = __WEBPACK_EXTERNAL_MODULE__2__;
 
 /***/ })
 /******/ 	]);
@@ -283,5 +293,7 @@ wujie.install = function(app) {
 
 })();
 
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
+});

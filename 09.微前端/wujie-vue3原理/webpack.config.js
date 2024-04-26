@@ -10,7 +10,10 @@ const config = {
     output:{
         filename:"index.js",
         path:path.resolve(__dirname,'lib'),
-        library:"wujievue"
+        // 正常工作用不到，只有开发插件会需要
+        library:"wujievue",
+        libraryTarget:"umd",
+        umdNamedDefine:true
     },
     // 给Cdn使用的
     externals:{

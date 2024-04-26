@@ -67,7 +67,12 @@ app.use(Wujie)// 注册
 主：pnpm run dev
 
 
- 
+ #### 无界Vue3原理
+pnpm init
+tsc init
+webpack.config.js
+
+pnpm i wujie
 
 
 ### pnpm 优势

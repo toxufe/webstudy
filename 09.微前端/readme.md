@@ -34,6 +34,8 @@ pnpm init
 配置 pnpm-workspace.yaml
 pnpn i
 
+
+pnpm -F 
  
 
 

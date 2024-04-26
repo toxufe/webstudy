@@ -5,6 +5,10 @@ const path = require('path');
  * @type {Configuration}
  */
 const config = {
-    
+    entry:"./src/index.ts",
+    output:{
+        filename:"index.js",
+        path:path.resolve(__dirname,'lib')
+    }
 };
 module.exports = config;

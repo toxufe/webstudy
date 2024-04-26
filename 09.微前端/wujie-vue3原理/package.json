@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lib": "webpack",
-    "esm": ""
+    "esm": "swc src/index.ts -d esm"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "ISC", 
   "dependencies": {
     "wujie": "^1.0.22"
   },

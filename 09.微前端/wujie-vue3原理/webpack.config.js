@@ -9,7 +9,8 @@ const config = {
     entry:"./src/index.ts",
     output:{
         filename:"index.js",
-        path:path.resolve(__dirname,'lib')
+        path:path.resolve(__dirname,'lib'),
+        library:"wujievue"
     },
     // 给Cdn使用的
     externals:{

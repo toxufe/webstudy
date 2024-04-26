@@ -31,6 +31,8 @@ npm 每个里边都需要安装
 monorepo 架构
 项目最外层可以安装依赖
 pnpm init
+配置 pnpm-workspace.yaml
+pnpn i
 
  
 

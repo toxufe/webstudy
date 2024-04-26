@@ -63,7 +63,8 @@ cd main
 del pnpm i wujie
 npm i wujie-vue3 -S
 import Wujie from 'wujie-vue3' // 引入
-app.use(Wujie)// 注册
+app.use(Wujie)// 注册 
+主：pnpm run dev
 
 
  

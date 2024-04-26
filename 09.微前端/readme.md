@@ -37,6 +37,9 @@ pnpn i
 
 // 根目录下执行 子应用
 pnpm -F react-demo dev
+
+common 文件夹
+pnpm init
  
 
 

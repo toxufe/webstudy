@@ -3,7 +3,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import Wujie from 'wujie-vue3'
+// import Wujie from 'wujie-vue3'
+import Wujie from 'wujie-vue-setup-test01'
 
 // import {api} from 'common'
 

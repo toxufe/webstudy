@@ -1,4 +1,4 @@
-import { defineComponent, h,getCurrentInstance,onMounted,watch } from 'vue';
+import { defineComponent, h,getCurrentInstance,onMounted,watch,onBeforeUnmount } from 'vue';
 import type { PropType } from 'vue';
 import { Props } from './type';
 import { startApp ,bus} from 'wujie'
@@ -66,6 +66,10 @@ const wujie = defineComponent({
         onMounted(()=>{
             bus.$onAll(eventHandler);
             init();
+        });
+
+        onBeforeUnmount(()=>{
+            bus.$offAll(eventHandler);
         });
         // name 和 url 是动态绑定,值改变之后需要重载
         watch([props.name,props.url],()=>{

@@ -16,6 +16,8 @@
 
 
 ## monorepo 架构
+pnpm 官网
+https://pnpm.io/zh/pnpm-workspace_yaml
 - npm i pnpm -g
 - pnpm -v
 - main 主应用 npm init vue

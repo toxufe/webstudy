@@ -58,7 +58,7 @@ save-workspace-protocol=true
  
 
 
-### pnpm 优势
+## pnpm 优势
 - pnpm官网优势
 - 只有一个仓库链接 组件 软连接 硬链接 组件中心
 - 软连接 符号链接 mklink ruan.js index.js 需要管理员的权限  快捷方式  ln -s
@@ -69,6 +69,7 @@ save-workspace-protocol=true
 - pnpm import 转成自用的软件管理包格式
 
 
+##
 
 #### 创建项目
 - pnpm init

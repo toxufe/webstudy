@@ -1,10 +1,13 @@
-import {defineComponent} from 'vue';
+import {defineComponent,h} from 'vue';
 
 
 const Wujie = defineComponent({
     setup(){
 
 
-        return ()=> ``;
+        return ()=> h('div',{
+            style:{},
+            ref:"wujie",// 方便之后读取
+        });
     }
-});
+}); 

@@ -100,6 +100,11 @@ pnpm install -D @swc/cli
 ],
 "main": "lib/index.js",
 "module": "esm/src/index.js",
+
+npm adduser
+npm login
+npm publish
+
 ### pnpm 优势
 - pnpm官网优势
 - 只有一个仓库链接 组件 软连接 硬链接 组件中心

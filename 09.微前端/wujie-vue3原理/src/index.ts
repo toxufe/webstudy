@@ -78,8 +78,13 @@ const wujie = defineComponent({
 
         
         return () => h('div', {
-            style: {},
+            style: {
+                width:props.width,
+                height:props.height
+            },
             ref: "wujie",// 方便之后读取
         });
     }
 }); 
+
+export default wujie;

@@ -47,6 +47,11 @@ pnpm i axios
 main 应用
 cd main 
 pnpm -F main add common
+
+pnpm版本不一直需要设置.nmprc
+link-workspace-packages=true
+save-workspace-protocol=true
+
  
 
 
@@ -59,6 +64,8 @@ pnpm -F main add common
 - pnpm store path 查看组件中心
 - 命令
 - pnpm import 转成自用的软件管理包格式
+
+
 
 #### 创建项目
 - pnpm init

@@ -25,6 +25,9 @@ importers:
       vue-router:
         specifier: ^4.3.0
         version: 4.3.2(vue@3.4.25(typescript@5.4.5))
+      wujie:
+        specifier: ^1.0.22
+        version: 1.0.22
       wujie-vue-setup-test01:
         specifier: ^0.0.1
         version: 0.0.1

@@ -1,3 +1,12 @@
+# vue ts
+window.$wujie.props 报错解决方式
+declare global {
+    interface Window {
+        $wujie : {
+            props:Recore<string,any>
+        }
+    }
+}
 # 微前端
 
 ## 实现方式
@@ -89,6 +98,48 @@ pnpm install -D @swc/cli
 
 使用setup函数模式 需要引入defineComponent
 
+#### 无界传参
+```js
+// 子应用读取父应用的参数
+window.parent.变量名;
+// 通过组件传参的形式
+// :props='{name:'xxx'}'
+// 子应用 会有$wujie的实例
+window.$wujie.props;
+
+eventBus 用的比较多哦
+主应用
+import {bus} from 'wujie'
+bus.$on('vue3',function(data:any){
+    console.log(data,"我是主应用");
+});
+子应用
+window.$wujie.bus.$emit('vue3','我是子应用')
+
+
+```
+
+#### 预加载
+mdn
+requestIdleCallback 
+浏览器没有任务执行  会有60ms的空闲时间 这个时间会执行  requestIdleCallback
+
+react16 postmessage + requestAnimationFrame
+polyfill
+setTimeOut 0 大概是4毫秒
+
+react18 
+```js
+let {port1,port2}= new MessageChannel()
+// onmessage 隐士开始start
+port1.onmessage = function(e){
+    console.log('收到了port2的消息',e);
+}
+
+postMessage();
+```
+
+
 #### 发布到npm
 设置版本号
 设置files:[]
@@ -125,4 +176,13 @@ npm publish
 
 ## 扁平???
 
+## 模块联邦技术
+- emp
+- 模块联邦技术和webpack5是强耦合的
+
+pnpm i webpack 
+pnpm i webpack-cli
+pnpm i webpack-dev-server
+pnpm i html-webpack-plugin
+-D
 

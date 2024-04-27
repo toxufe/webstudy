@@ -5,9 +5,9 @@ import { } from "vue"
 <template>
   <h1>这是主应用</h1>
   <!-- 子应用 React -->
-  <WuJieVue name="react" url="http://localhost:5174/"></WuJieVue>
+  <WujieVue name="react" url="http://localhost:5174/"></WujieVue>
   <!-- 子应用 Vue -->
-  <WuJieVue name="vue" url="http://localhost:5175/"></WuJieVue>
+  <WujieVue name="vue" url="http://localhost:5175/"></WujieVue>
 </template>
 
 <style lang="scss" scoped></style>

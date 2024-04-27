@@ -14,6 +14,7 @@
     "common": "workspace:^1.0.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
+    "wujie": "^1.0.22",
     "wujie-vue-setup-test01": "^0.0.1",
     "wujie-vue3": "^1.0.22"
   },

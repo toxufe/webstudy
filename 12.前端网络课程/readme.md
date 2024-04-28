@@ -81,6 +81,10 @@ UDP是没有三次握手四次挥手的，故此不稳定，但是速度快常�
 在上一节讲过TCP是面向连接的  
 什么是面向连接，面向连接就是数据通讯的时候需要进行三次握手，断开通信的时候进行 四次挥手
 
-
+1.seq(sequence number)，序列号随机生成的  
+2.ack(acknowledgement number)确认号ack=seg+1  
+3.ACK (acknowledgement)确定序列号有效  
+4.SYN(synchronous)发起新连接
+![](../source/img/2024-04-28-22-58-41.png)
 
 

@@ -143,7 +143,8 @@ DNS 把ip和域名做映射
 查询dns发送请求的规则命令  
 dig +trace baidu.com  
 
-获取到IP
+获取到对应的IP，发送网络请求。  
+OSI
 
 
 

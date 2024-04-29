@@ -154,8 +154,12 @@ options 跨域、自定义请求头，触发预检请求
 强缓存  
 静态资源  
 后台配置  
+请求头存放：res.setHeader('Cache-Control','max-age=10');  
+缓存10秒钟  
+![](../source/img/2024-04-29-23-45-23.png)
 
 协商缓存  
+
 
 
 

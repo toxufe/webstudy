@@ -146,7 +146,18 @@ dig +trace baidu.com
 获取到对应的IP，发送网络请求。  
 OSI  
 
-options + post  
+options + post + json  
+options 跨域、自定义请求头，触发预检请求  
+
+
+### 浏览器缓存
+强缓存  
+静态资源  
+后台配置  
+
+协商缓存  
+
+
 
 
 

@@ -114,10 +114,16 @@ WireShark
 
 2. DNS查询
     ![](../source/img/2024-04-29-23-22-39.png)
-    服务器有ip
-    DNS 把ip和域名做映射
-    查找顺序
-        - 浏览器里的DNS
-        - ![](../source/img/2024-04-29-23-24-06.png)
+    服务器有ip  
+    DNS 把ip和域名做映射  
+
+
+    查找顺序  
+        - 浏览器里的DNS  
+        - ![](../source/img/2024-04-29-23-24-06.png)  
+        - 操作系统的DNS /user/etc/dns  
+        - 本地host文件  
+        - 域名服务器发送请求  
+
 
 

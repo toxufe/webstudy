@@ -141,7 +141,9 @@ DNS 把ip和域名做映射
 ![](../source/img/2024-04-29-23-32-39.png)
 
 查询dns发送请求的规则命令  
-dig +trace baidu.com
+dig +trace baidu.com  
+
+获取到IP
 
 
 

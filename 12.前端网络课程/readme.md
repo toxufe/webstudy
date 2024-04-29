@@ -144,7 +144,10 @@ DNS 把ip和域名做映射
 dig +trace baidu.com  
 
 获取到对应的IP，发送网络请求。  
-OSI
+OSI  
+
+options + post  
+
 
 
 

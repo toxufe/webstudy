@@ -126,6 +126,11 @@ DNS 把ip和域名做映射
 - 域名服务器发送请求  递归查找  
 
 ### 演示本地host
+软件 switchHosts!  
+```.host
+127.0.0.1 xiaoman.com
+```
+
 
 
 

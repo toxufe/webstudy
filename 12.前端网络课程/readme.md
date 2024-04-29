@@ -178,4 +178,9 @@ GMT时间
 
  ### V8解析JavaScript
  ![](../source/img/2024-04-29-23-54-14.png)
+
+ 字节码 跨平台  
+
+ JIT AOT  
+
  

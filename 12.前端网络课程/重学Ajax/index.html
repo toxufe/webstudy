@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 
+    五个知识点
+    1. get
+    2. post application/json
+    3. form-data-urlencoded
+    4. mutipart/form-data boundary
+    5. 中断请求 进度条 超时设置
+    -->
+
+    <button id="send">发送请求</button>
+    <div>进度条：<span id="progress"></span></div>
+    <script>
+        // liverserver 启动
+        // npm i http-server  -g  http-server -p 9999
+        const btn = document.getElementById('send');
+        // console.log('btn: ', btn);
+        btn.addEventListener('click',function(){
+            sendAjax();
+        });
+        // 发送get请求
+        // const sendAjax = ()=>{
+        //     const xhr = new XMLHttpRequest();
+        //     // 三个参数：请求方式 请求地址 是否异步 默认true异步
+        //     xhr.open('get', 'http://localhost:3000/api/text', true);
+            
+        //     xhr.onreadystatechange = ()=>{
+        //         if(xhr.readyState === 4 && xhr.status === 200){
+        //             console.log(xhr.responseText);
+        //         }
+        //     }
+        //     xhr.send(null);
+        // }
+
+        // 监听数据进度
+        const sendAjax = ()=>{
+            const xhr = new XMLHttpRequest();
+            // 三个参数：请求方式 请求地址 是否异步 默认true异步
+            xhr.open('get', 'http://localhost:3000/api/text', true);
+
+            // 监听数据进度 全部加载表示可能有缓存
+            xhr.addEventListener('progress', (event)=>{
+                console.log(event.loaded, event.total);
+                document.getElementById('progress').innerText = `${(event.loaded/event.total*100).toFixed(2)}%`;
+            },false);
+            
+            xhr.onreadystatechange = ()=>{
+                if(xhr.readyState === 4 && xhr.status === 200){
+                    // console.log(xhr.responseText); 
+                }
+            }
+            xhr.send(null);
+        }
+    </script>
+</body>
+</html>

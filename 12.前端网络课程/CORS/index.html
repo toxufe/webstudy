@@ -7,7 +7,70 @@
 </head>
 <body>
     <script>
-        // 1. jsonp
+        // 1.jsonp  必须启动webserver files协议不支持跨域
+        // 原理就是通过javascript 的src 不受同源策略限制，可以跨域请求资源,但是只能发送get请求
+        // 缺点：只能发送get请求，不安全，不容易维护
+        // 后端返回的是一个函数，但是这个函数是在前端定义的，它会把值注入到这个函数的参数里边
+
+        // const jsonp = (name)=>{
+        //     let script = document.createElement('script');
+        //     script.src = `http://localhost:3000/api/jsonp?callback=${name}`;
+        //     document.body.appendChild(script);
+
+        //     return new Promise((resolve)=>{
+        //         console.log('window[name]: ', window[name]);
+        //         window[name] = (data)=>{
+        //             console.log('window[name]: ', window[name]);
+        //             resolve(data)
+        //         }
+        //     })
+    
+        // }
+        // jsonp(`callback${new Date().getTime()}`).then((data)=>{
+        //     console.log('data: ', data);
+        // })
+        // 后端命令
+        // /**
+        //  * pnpm init
+        //  * pnpm i express
+        //  * pnpm i @types/express 声明文件
+        //  * pnpm i @types/node 声明文件 
+        //  * /
+
+        // 2. 前端解决跨域 只针对开发环境有效
+        // 前端解决顾阿U需要借助构建工具 webpack rollup vite
+        // 演示vite 安装 pnpm i vite  vite.config.ts  配置vite服务
+        // fetch 第一个then是数据类型 第二个then是数据
+        // fetch('http://localhost:5173/api/json').then(res=>res.json()).then(data=>{
+        //     console.log('data: ', data);
+        // })
+
+        // 3. 后端的方式解决
+        // Access-Control-Allow-Origin: http://127.0.0.1:5500
+        // fetch('http://localhost:3000/api/json').then(res=>res.json()).then(data=>{
+        //     console.log('data: ', data);
+        // })
+
+        // 4. nginx 代理解决跨域
+        // 安装homebrew https://brew.sh/zh-cn/
+        // 安装nginx brew install nginx
+        // 确认安装成功 nginx -v
+        // 启动： sudo nginx localhost:8080
+        // 检查配置文件: sudo nginx -t  
+        // 重载： sudo nginx -s reload
+        // Docroot is: /usr/local/var/www
+        // The default port has been set in /usr/local/etc/nginx/nginx.conf to 8080 so that
+        // nginx can run without sudo.
+        // nginx will load all files in /usr/local/etc/nginx/servers/.
+        // To start nginx now and restart at login:
+        //   brew services start nginx
+        // Or, if you don't want/need a background service you can just run:
+        //   /usr/local/opt/nginx/bin/nginx -g daemon\ off\;
+
+
+        // window 微软商店  wsl
+        // ubuntun apt-get install nginx
+        // 获取主机的ip cat /etc/resolv.conf
     </script>
     
 </body>

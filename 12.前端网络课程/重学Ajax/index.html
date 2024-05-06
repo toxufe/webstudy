@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   <!-- 
+    <!-- 
     五个知识点
     1. get
     2. post application/json
@@ -15,22 +17,66 @@
     5. 中断请求 进度条 超时设置
     -->
 
+    <!-- 
+        额外的小知识
+
+    
+    -->
+
+    <button id="stop">中断请求</button>
     <button id="send">发送请求</button>
+    <button id="sendAjaxPost">post请求</button>
+    <input type="file" id="myfile">
+
     <div>进度条：<span id="progress"></span></div>
     <script>
         // liverserver 启动
         // npm i http-server  -g  http-server -p 9999
         const btn = document.getElementById('send');
+        const stop = document.getElementById('stop');
+        const btnpost = document.getElementById('sendAjaxPost');
+        const file = document.getElementById('myfile');
         // console.log('btn: ', btn);
-        btn.addEventListener('click',function(){
+        btn.addEventListener('click', function () {
             sendAjax();
+        });
+
+        btnpost.addEventListener('click', function () {
+            sendAjaxPost();
+        });
+        // 上传文件
+        file.addEventListener('change', function () {
+            // sendAjaxUpfile();
+            const formData = new FormData();
+            formData.append('file', file.files[0]);// file 对应后端的key
+            const xhr = new XMLHttpRequest();
+            // 三个参数：请求方式 请求地址 是否异步 默认true异步
+            xhr.open('post', 'http://localhost:3000/api/upload', true);
+            // 不需要 自己设置不知道 boundary 的分割格式，让浏览器自己设置即可
+            // xhr.setRequestHeader('Content-Type', 'multipart/form-data');// 上传文件头
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText); 
+                }
+            }
+
+            // 额外的小知识  xhr.readyState === 4 触发onload事件
+            xhr.addEventListener('load',()=>{
+                if(xhr.status === 200){
+                    console.log('请求成功，触发onload事件');
+                }
+            })
+
+
+            xhr.send(formData);
         });
         // 发送get请求
         // const sendAjax = ()=>{
         //     const xhr = new XMLHttpRequest();
         //     // 三个参数：请求方式 请求地址 是否异步 默认true异步
         //     xhr.open('get', 'http://localhost:3000/api/text', true);
-            
+
         //     xhr.onreadystatechange = ()=>{
         //         if(xhr.readyState === 4 && xhr.status === 200){
         //             console.log(xhr.responseText);
@@ -40,24 +86,138 @@
         // }
 
         // 监听数据进度
-        const sendAjax = ()=>{
+        const sendAjax = () => {
             const xhr = new XMLHttpRequest();
             // 三个参数：请求方式 请求地址 是否异步 默认true异步
-            xhr.open('get', 'http://localhost:3000/api/text', true);
+            xhr.open('get', 'http://localhost:3000/api/text?name=111', true);
+
+            // 设置超时时间 正常业务设置1分钟
+            xhr.timeout = 3000;
+            xhr.addEventListener('timeout', () => {
+                console.log('请求超时');
+            }, false);
 
             // 监听数据进度 全部加载表示可能有缓存
-            xhr.addEventListener('progress', (event)=>{
+            xhr.addEventListener('progress', (event) => {
                 console.log(event.loaded, event.total);
-                document.getElementById('progress').innerText = `${(event.loaded/event.total*100).toFixed(2)}%`;
-            },false);
-            
-            xhr.onreadystatechange = ()=>{
-                if(xhr.readyState === 4 && xhr.status === 200){
+                document.getElementById('progress').innerText = `${(event.loaded / event.total * 100).toFixed(2)}%`;
+            }, false);
+
+
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
                     // console.log(xhr.responseText); 
                 }
             }
+
+            // ajax 监听连接中断
+            xhr.addEventListener('abort', () => {
+                console.log('连接中断');
+            }, false);
+
+            // 中断请求 没有办法恢复请求
+            stop.addEventListener('click', () => {
+                xhr.abort();
+            });
             xhr.send(null);
         }
+
+
+        // 监听数据进度
+        const sendAjaxPost = () => {
+            const xhr = new XMLHttpRequest();
+            // 三个参数：请求方式 请求地址 是否异步 默认true异步
+            xhr.open('post', 'http://localhost:3000/api/post', true);
+
+            // 设置请求头 json的请求头 一定要放在open的下边
+            // xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // 设置超时时间 正常业务设置1分钟
+            // xhr.timeout = 3000;
+            // xhr.addEventListener('timeout', () => {
+            //     console.log('请求超时');
+            // }, false);
+
+            // 监听数据进度 全部加载表示可能有缓存
+            xhr.addEventListener('progress', (event) => {
+                console.log(event.loaded, event.total);
+                document.getElementById('progress').innerText = `${(event.loaded / event.total * 100).toFixed(2)}%`;
+            }, false);
+
+
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText); 
+                }
+            }
+
+            // ajax 监听连接中断
+            xhr.addEventListener('abort', () => {
+                console.log('连接中断');
+            }, false);
+
+            // 中断请求 没有办法恢复请求
+            stop.addEventListener('click', () => {
+                xhr.abort();
+            });
+            // post 传递参数 传递json 需要进行序列化
+            // xhr.send(JSON.stringify({name: 'Fly'}));
+            // application/x-www-form-urlencoded
+            xhr.send('name=Fly111&ccc=111');
+        }
+
+
+        
+
+        // 监听数据进度
+        const sendAjaxUpfile = () => {
+            const xhr = new XMLHttpRequest();
+            // 三个参数：请求方式 请求地址 是否异步 默认true异步
+            xhr.open('post', 'http://localhost:3000/api/post', true);
+
+            // 设置请求头 json的请求头 一定要放在open的下边
+            // xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // 设置超时时间 正常业务设置1分钟
+            // xhr.timeout = 3000;
+            // xhr.addEventListener('timeout', () => {
+            //     console.log('请求超时');
+            // }, false);
+
+            // 监听数据进度 全部加载表示可能有缓存
+            xhr.addEventListener('progress', (event) => {
+                console.log(event.loaded, event.total);
+                document.getElementById('progress').innerText = `${(event.loaded / event.total * 100).toFixed(2)}%`;
+            }, false);
+
+
+
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText); 
+                }
+            }
+
+            // ajax 监听连接中断
+            xhr.addEventListener('abort', () => {
+                console.log('连接中断');
+            }, false);
+
+            // 中断请求 没有办法恢复请求
+            stop.addEventListener('click', () => {
+                xhr.abort();
+            });
+            // post 传递参数 传递json 需要进行序列化
+            // xhr.send(JSON.stringify({name: 'Fly'}));
+            // application/x-www-form-urlencoded
+            xhr.send('name=Fly111&ccc=111');
+        }
+
     </script>
 </body>
+
 </html>

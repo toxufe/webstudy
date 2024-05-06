@@ -1,0 +1,19 @@
+{
+  "name": "CORS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "express": "^4.19.2",
+    "multer": "1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/multer": "^1.4.11"
+  }
+}

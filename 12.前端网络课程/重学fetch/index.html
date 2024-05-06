@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+
+<body>
+    <!-- 
+    五个知识点
+    1. get
+    2. post application/json
+    3. form-data-urlencoded
+    4. mutipart/form-data boundary
+    5. 中断请求 进度条 超时设置
+    text(): 将响应体转换为文本
+    json(): 将响应体转换为json对象
+    blob(): 将响应体转换为blob对象
+    arrayBuffer(): 将响应体转换为二进制数组
+    formData(): 将响应体转换为formData对象
+    -->
+
+    <button id="stop">中断请求</button>
+    <button id="send">发送请求</button>
+    <button id="sendAjaxPost">post请求</button>
+    <input type="file" id="myfile">
+    <div>进度条：<span id="progress"></span></div>
+    <script>
+        // liverserver 启动
+        // npm i http-server  -g  http-server -p 9999
+        const btn = document.getElementById('send');
+        const stop = document.getElementById('stop');
+        const btnpost = document.getElementById('sendAjaxPost');
+        const file = document.getElementById('myfile');
+        btn.addEventListener('click', function () {
+            sendAjax();
+        });
+
+        btnpost.addEventListener('click', function () {
+            sendAjaxPost();
+        });
+        // 上传文件
+        file.addEventListener('change', function () {
+            
+        });
+        
+
+        // 发送get请求
+        const sendAjax = () => {
+            // 第一个参数是url 默认请求方式get 返回值是一个promise
+            fetch("http://localhost:3000/api/text").then(res=>{
+                // 第一个res 返回是一个fetch的response对象
+                // 指定返回的方式
+                return res.text();
+            }).then(res=>{
+                // 第二个then 返回的是上一个then的返回值
+                console.log('res: ', res);
+            });
+        }
+
+
+        // 发送post请求
+        const sendAjaxPost = () => {
+            // 第一个参数是url 默认请求方式get 返回值是一个promise
+            fetch("http://localhost:3000/api/post",{
+                method:'post',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    name:'zhangsan',
+                    age:18
+                })
+            }).then(res=>{
+                // 第一个res 返回是一个fetch的response对象
+                // 指定返回的方式
+                return res.json();
+            }).then(res=>{
+                // 第二个then 返回的是上一个then的返回值
+                console.log('res: ', res);
+            });
+        }
+
+            
+    </script>
+</body>
+
+</html>

@@ -35,7 +35,7 @@ app.use(express.urlencoded({extended:true}));
 
 // 后端post请求
 app.post('/api/post',(req,res)=>{
-    console.log(req.body.name,req.body.ccc);
+    console.log(req.body.name,req.body.age);
     res.json({message:'post请求成功'})
 });
 

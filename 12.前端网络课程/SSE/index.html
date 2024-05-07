@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.addEventListener('keydown',(e)=>{
+            if(e.keyCode == 13){
+                // 回车键
+                const sse = new EventSource("http://localhost:3000/api/sse");
+
+                // 如果后端没有设置event 则默认监听 message 事件
+                // sse.addEventListener('message', (e)=>{
+                //     console.log(e.data);
+                //     document.getElementById('message').innerHTML += e.data;
+                // });
+
+                sse.addEventListener('lol', (e)=>{
+                    console.log(e.data);
+                    document.getElementById('message').innerHTML += e.data;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

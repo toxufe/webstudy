@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+    <input id="message" type="text">
+    <button id="send">发送</button>
+    <button id="stop">断开</button>
+    <script>
+        // websocket 协议是 ws 或 wss
+        const ws = new WebSocket('ws://localhost:8080');
+
+        // open 链接成功
+        ws.addEventListener('open', () => {
+            console.log('连接成功');
+        });
+
+
+        const btn = document.querySelector('#send');
+        const input = document.querySelector('#message');
+
+        btn.addEventListener('click', () => {
+            if (input.value) {
+                ws.send(input.value);
+                input.value = '';
+            }
+        });
+
+        // ws.onmessage = (event) => {
+        //     console.log('接收到消息', event.data);
+        //     const ul = document.querySelector('ul');
+        //     const li = document.createElement('li');
+        //     li.textContent = event.data;
+        //     ul.appendChild(li);
+        // };
+
+
+
+        ws.addEventListener('message', (event) => {
+            console.log('接收到消息', event.data);
+
+            const data = JSON.parse(event.data);
+            if (data.type == 'message') {
+                const ul = document.querySelector('ul');
+                const li = document.createElement('li');
+                li.textContent = data.msg
+                ul.appendChild(li);
+            }
+
+        });
+
+        const stop = document.querySelector('#stop');
+        stop.addEventListener('click', () => {
+            // 调用close主动关闭链接
+            ws.close();
+        });
+
+    </script>
+</body>
+
+</html>

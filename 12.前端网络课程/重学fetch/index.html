@@ -45,15 +45,52 @@
         file.addEventListener('change', function () {
             
         });
-        
+
+        // 中断请求
+        const abort = new AbortController();
+
+        stop.addEventListener('click', function () {
+            abort.abort();
+        });
+
+        // 超时设置
+        // setTimeout(() => {
+        //     abort.abort();
+        // }, 5000);
 
         // 发送get请求
         const sendAjax = () => {
             // 第一个参数是url 默认请求方式get 返回值是一个promise
-            fetch("http://localhost:3000/api/text").then(res=>{
+            fetch("http://localhost:3000/api/text",{
+                // 中断请求使用
+                signal:abort.signal
+            }).then(async res=>{
                 // 第一个res 返回是一个fetch的response对象
+
+
+                const response = res.clone();// 克隆一份response对象 用于返回值 因为原值会被进度条占用
+
+                // 进度条
+                // 获取当前的进度和总进度 流
+                const reader = res.body.getReader();// 流
+                const contentLength = res.headers.get('Content-Length');// 总进度
+                let loaded = 0;// 当前进度
+                while(true){
+                    // done 如果是true 说明流已经结束了 如果为false 说明还有数据
+                    // value 是一个Uint8Array 类型的数据
+                    const {done,value} = await reader.read();
+                    if(done){
+                        break
+                    }
+                    loaded+=value.length;// 当前的进度
+                    const progress = document.querySelector('#progress');
+                    progress.innerHTML = `${(loaded/contentLength*100).toFixed(2)}%`;
+                }
+      
+                 
+
                 // 指定返回的方式
-                return res.text();
+                return response.text();
             }).then(res=>{
                 // 第二个then 返回的是上一个then的返回值
                 console.log('res: ', res);

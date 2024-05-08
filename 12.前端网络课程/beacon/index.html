@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="send">发送</button>
+    <script>
+        const btn = document.querySelector("#send");
+        btn.addEventListener('click', () => {
+            const json = JSON.stringify({name:'小满'});
+            const blob = new Blob([json], {type: 'application/json;charset=UTF-8'});
+            navigator.sendBeacon('http://localhost:3000/api/post',json);
+
+        });
+    </script>
+</body>
+
+</html>

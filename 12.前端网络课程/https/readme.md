@@ -26,6 +26,7 @@ openssl req -new -key private-key.pem -out certificate.csr
 
 ![](../../source/img/2024-05-10-07-04-42.png)
 
-
+生成数字证书
+![](../../source/img/2024-05-10-07-06-33.png)
 ### nodejs server https
 ### nginx https

@@ -20,9 +20,11 @@
 openssl genpkey -algorithm RSA -out private-key.pem -aes256
 输入一段密码 生成私钥 111111
 
-生成pem证书文件  
+生成pem证书文件  csr证书签名文件
 openssl req -new -key private-key.pem -out certificate.csr  
 ![](../../source/img/2024-05-10-07-03-28.png)
+
+![](../../source/img/2024-05-10-07-04-42.png)
 
 
 ### nodejs server https

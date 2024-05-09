@@ -17,5 +17,8 @@
 
 ## 开发和测试环境使用
 ![](../../source/img/2024-05-10-06-57-58.png)
+openssl genpkey -algorithm RSA -out private-key.pem -aes256
+输入一段密码 生成私钥 111111
+
 ### nodejs server https
 ### nginx https

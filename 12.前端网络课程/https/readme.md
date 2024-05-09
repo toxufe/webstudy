@@ -24,6 +24,7 @@ openssl genpkey -algorithm RSA -out private-key.pem -aes256
 openssl req -new -key private-key.pem -out certificate.csr  
 ![](../../source/img/2024-05-10-07-03-28.png)
 
+密码盐 ZXZXZX
 ![](../../source/img/2024-05-10-07-04-42.png)
 
 生成数字证书

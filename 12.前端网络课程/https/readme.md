@@ -20,5 +20,8 @@
 openssl genpkey -algorithm RSA -out private-key.pem -aes256
 输入一段密码 生成私钥 111111
 
+生成pem证书文件  
+openssl req -new -key private-key.pem -out certificate.csr
+
 ### nodejs server https
 ### nginx https

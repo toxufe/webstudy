@@ -32,3 +32,8 @@ openssl x509 -req -in certificate.csr -signkey private-key.pem -out certificate.
 ![](../../source/img/2024-05-10-07-06-33.png)
 ### nodejs server https
 ### nginx https
+生成没有密码的key
+openssl genrsa -out nginx.key 2048
+openssl req -new -key nginx.key -out nginx.csr
+openssl x509 -req -in nginx.csr -signkey nginx.key -out nginx.crt
+![](../../source/img/2024-05-11-23-20-53.png)

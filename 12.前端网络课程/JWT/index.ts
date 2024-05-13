@@ -20,26 +20,26 @@ app.post('/api/login', (req, res) => {
     if (username === user.username && password === user.password) {
         res.json({
             message: '登录成功',
-            token: jwt.sign({ id: user.id}, Key, {expireIn: '1h' })
-        }); 
+            token: jwt.sign({ id: user.id }, Key, { expiresIn: '1h' })
+        });
     } else {
         res.status(403).json({ message: '用户名或密码错误' });
     }
 });
 // 2. 列表接口但是必须是授权状态才能访问,否则是403 
-app.get('/api/list',(req,res)=>{
+app.get('/api/list', (req, res) => {
     // 前端会把token存到这个请求头里，这是一个规范 authorization
     let token = req.headers.authorization as string;
-    jwt.verify(token,Key,(err:any,decode:any)=>{
-        if(err){
+    jwt.verify(token, Key, (err: any, decode: any) => {
+        if (err) {
             // token 没有权限 根据规范是返回403 
-            res.status(403).json({message:'无效的token'});
-        }else{
+            res.status(403).json({ message: '无效的token' });
+        } else {
             res.json({
-                list:[
-                    {id:1,name:'张三'},
-                    {id:2,name:'李四'},
-                    {id:3,name:'王五'},
+                list: [
+                    { id: 1, name: '张三' },
+                    { id: 2, name: '李四' },
+                    { id: 3, name: '王五' },
                 ]
             });
         }

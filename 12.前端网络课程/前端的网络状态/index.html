@@ -9,14 +9,18 @@
 
     <script>
         // 1. 前端的网络状态如何获取以及对应的时间
+        // 当前网络状态
         // console.log("navigator.onLine",navigator.onLine);
-        window.addEventListener("online",function(){
-            console.log("online",new Date());
-        });
-        window.addEventListener("offline",function(){
-            console.log("offline",new Date());
-        });
+        // // 触发的上线事件
+        // window.addEventListener("online",function(){
+        //     console.log("online",new Date());
+        // });
+        // // 触发了离线事件
+        // window.addEventListener("offline",function(){
+        //     console.log("offline",new Date());
+        // });
         // 2. 前端如何判断强网和弱网状态
+        console.log(navigator.connection);
     </script>
     
 </body>

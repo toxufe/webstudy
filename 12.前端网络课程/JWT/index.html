@@ -33,6 +33,7 @@
             }).then(res => res.json()).then(data => {
                 // console.log(data.token);
                 window.localStorage.setItem('token', data.token);
+                location.href = 'list.html';
             });
 
         }

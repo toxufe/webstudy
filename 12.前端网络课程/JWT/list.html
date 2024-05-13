@@ -8,7 +8,11 @@
 <body>
     <script>
         const token = window.localStorage.getItem('token');
-        fetch('http://localhost:3000/api/list').then(res => res.json()).then(data => {
+        fetch('http://localhost:3000/api/list',{
+            headers:{
+                'Authorization': token,
+            }
+        }).then(res => res.json()).then(data => {
             console.log(data);
         });
         

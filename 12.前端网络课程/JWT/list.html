@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        // Bearer 不是一定要加的 他只是一个规范
         const token = window.localStorage.getItem('token');
         fetch('http://localhost:3000/api/list',{
             headers:{

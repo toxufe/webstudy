@@ -30,9 +30,9 @@ app.post('/api/login', (req, res) => {
 app.get('/api/list',(req,res)=>{
     // 前端会把token存到这个请求头里，这是一个规范 authorization
     let token = req.headers.authorization as string;
-    jwt.verify(token,Key,(err,decode)=>{
+    jwt.verify(token,Key,(err:any,decode:any)=>{
         if(err){
-            // token 没有权限 根据规范是返回403
+            // token 没有权限 根据规范是返回403 
             res.status(403).json({message:'无效的token'});
         }else{
             res.json({

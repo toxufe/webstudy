@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <textarea id="a"></textarea>
+    <script>
+        // dom xss 注入
+        document.addEventListener('keydown',function(e){
+            if(e.keyCode == 13){
+                // enter 
+                let value = document.getElementById('a').value;
+                value = value.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+                document.body.innerHTML += value;
+            }
+        });
+
+        // 前后端都需要过滤
+        // npm xss 
+       
+    </script>
+
+<!-- // 可以注入 <script>alert(1)</script>
+// 也可以注入 <script url=""></script> -->
+</body>
+</html>

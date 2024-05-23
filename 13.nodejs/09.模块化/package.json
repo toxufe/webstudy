@@ -1,0 +1,12 @@
+{
+  "name": "mkh",
+  "version": "1.0.0",
+  "description": "![](../../source/img/2024-05-23-23-12-52.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "commonjs",
+  "author": "",
+  "license": "ISC"
+}

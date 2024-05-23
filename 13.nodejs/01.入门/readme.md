@@ -66,3 +66,30 @@ vite plugin
 
 ![](../source/img/2024-05-22-23-39-49.png)
 
+
+npm 缓存包
+integrity + version + name + 缓存
+
+
+## npm run dev
+所有的可行命令都在.bin中
+1. 当前的项目找node_modules/.bin  vite
+2. 全局的node_modules 下面去找 npm install ts-node -g
+3. 环境变量下边去找
+4. 报错
+
+[/usr/local/lib/node_modules]
+
+## 生命周期
+CI脚本  
+
+package.json
+```json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev":"node pre.js",
+    "dev": "node index.js",
+    "postdev":"node post.js"
+  }
+```
+

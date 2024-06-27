@@ -13,3 +13,10 @@
 // 显示模块下所有的方法
 // import * as all from './esmtest.js';
 // console.log('all: ', all);
+
+// 别名
+// import {name as myName} from './esmtest.js';
+
+// 不支持引入json文件 前端支持是因为有三方插件
+// import data from './data.json' assert {type: "json"};
+// console.log('data: ', data);

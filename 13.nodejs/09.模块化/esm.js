@@ -23,12 +23,21 @@
 
 
 
-const aa = {cc:1};
-const dd = {cc:2};
-const obj = new Map();
-obj.set(aa, [1]);
-obj.set(dd, [2]);
+// const aa = {cc:1};
+// const dd = {cc:2};
+// const obj = new Map();
+// obj.set(aa, [1]);
+// obj.set(dd, [2]);
 
-for (let [key, value] of obj) {
-    console.log(key.cc, value);
-}
+// if(obj.has(aa)){
+//     let ddd = obj.get(aa);
+//     // ddd.push[3]
+//     ddd.push(3);
+//     // console.log('ddd: ', ddd);
+//     // console.log('ddd: ', ddd.length);
+//     // obj.set(aa, ddd);
+// }
+
+// for (let [key, value] of obj) {
+//     console.log(key, value);
+// }

@@ -1,3 +1,5 @@
+// commonjs 规范
+// package.json "type": "commonjs",
 // commonjs 规范的五种模式
 // 1. 引入自己编写的模块
 // require('./test');

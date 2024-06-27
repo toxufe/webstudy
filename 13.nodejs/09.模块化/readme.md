@@ -31,3 +31,5 @@ console.log(data,1);
 module.export = {
     
 }
+
+### cjs 和 esm的区别

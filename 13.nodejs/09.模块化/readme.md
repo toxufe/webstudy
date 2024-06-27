@@ -33,3 +33,4 @@ module.export = {
 }
 
 ### cjs 和 esm的区别
+![](../../source/img/2024-06-27-23-21-52.png)

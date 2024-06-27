@@ -36,3 +36,6 @@ module.export = {
 ![](../../source/img/2024-06-27-23-21-52.png)
 
 ### nodejs 源代码下载
+下载地址  
+https://nodejs.org/zh-cn/download/source-code  
+

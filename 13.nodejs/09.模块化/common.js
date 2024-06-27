@@ -24,3 +24,5 @@
 // 可以使用解构的方式
 // const { success, error } = require("./test.js");
 // console.log('success: ', success);
+
+

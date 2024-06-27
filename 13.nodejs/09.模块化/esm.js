@@ -20,3 +20,15 @@
 // 不支持引入json文件 前端支持是因为有三方插件
 // import data from './data.json' assert {type: "json"};
 // console.log('data: ', data);
+
+
+
+const aa = {cc:1};
+const dd = {cc:2};
+const obj = new Map();
+obj.set(aa, [1]);
+obj.set(dd, [2]);
+
+for (let [key, value] of obj) {
+    console.log(key.cc, value);
+}

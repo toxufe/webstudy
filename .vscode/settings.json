@@ -6,7 +6,7 @@
         "titleBar.activeBackground": "#6D2C1B",
         "titleBar.activeForeground": "#FDF9F8"
     },
-    "gitdoc.enabled": true,
+    "gitdoc.enabled": false,
     "figimg.smmsToken": "LqrCQAKaY1EGOYvv3ojHUxfe25HD46Yj",
     "pasteImage.path": "${projectRoot}/source/img"
 }

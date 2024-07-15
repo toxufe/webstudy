@@ -24,3 +24,6 @@ console.log(path.join('/a', 'b', 'c', 'd','../'));
 // 5.resolve 解析路径 返回的是绝对路径
 console.log(path.resolve("./index.js"));// 返回对当前工作目录的绝对路径
 console.log(path.resolve(__dirname,"./index.js"));
+
+// parse 把路径解析成对象  format 逆向操作
+console.log(path.parse("/a/b/c/d.html"));

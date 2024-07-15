@@ -22,6 +22,9 @@ console.log('os.version(): ', os.version());
 
 // os.freemem(): 返回系统空闲内存量，以字节为单位。
 
+// os.homedir(): 返回当前用户的主目录。
+console.log('os.homedir(): ', os.homedir());
+
 // os.hostname(): 返回主机名。
 
 // os.networkInterfaces(): 返回一个对象，该对象包含有关网络接口的信息。
@@ -49,4 +52,4 @@ const open = (url)=>{
     }
 }
 
-open("http://www.baidu.com");
+// open("http://www.baidu.com");

@@ -17,3 +17,8 @@ console.log('basename2: ', basename2);
 
 // 3.extname 返回路径的扩展名 带点
 console.log(path.extname("/a/a/ccc.b.b.b.aaa"));
+ 
+// 4.join 路径拼接 支持 ./ ../
+console.log(path.join('/a', 'b', 'c', 'd','../'));
+
+// 5.resolve

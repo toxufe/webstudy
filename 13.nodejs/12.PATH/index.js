@@ -27,3 +27,4 @@ console.log(path.resolve(__dirname,"./index.js"));
 
 // parse 把路径解析成对象  format 逆向操作
 console.log(path.parse("/a/b/c/d.html"));
+console.log(path.format(path.parse("/a/b/c/d.html")));

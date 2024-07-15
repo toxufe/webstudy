@@ -1,4 +1,6 @@
 const os = require("node:os");
+const {exec} = require("child_process");
+// exec 执行shell命令
 
 // Node.js 中的 os 模块提供了一些常用的 API，用于获取操作系统相关的信息。以下是一些常用的 os 模块的 API：
 // os.platform(): 返回操作系统平台，例如 "darwin", "win32", "linux" 等。
@@ -31,3 +33,20 @@ console.log('os.version(): ', os.version());
 
 
 // 这些是 os 模块中一些常用的 API，可以帮助您获取关于操作系统的各种信息。
+
+// 根据不同的操作系统 打开网址
+const open = (url)=>{
+    const platform = os.platform();
+    if(platform === 'darwin'){
+        // mac
+        exec(`open ${url}`);
+    }else if (platform === "win32"){
+        // window
+        exec(`start ${url}`);
+    }else if(platform === 'linux'){
+        // linux
+        exec(`xdg-open ${url}`);
+    }
+}
+
+open("http://www.baidu.com");

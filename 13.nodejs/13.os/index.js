@@ -6,6 +6,8 @@ console.log('os.platform(): ', os.platform());
 
 // os.release() 是 os 模块提供的一个常用 API，用于获取操作系统的版本信息。
 console.log('os.release(): ', os.release());
+// os.type(): 返回操作系统类型，例如 "Linux", "Windows_NT" 等。
+console.log('os.type(): ', os.type());
 // os.arch(): 返回操作系统的体系结构，例如 "x64", "arm" 等。
 
 // os.cpus(): 返回一个包含有关系统 CPU 核心信息的对象数组。
@@ -22,6 +24,6 @@ console.log('os.release(): ', os.release());
 
 // os.uptime(): 返回系统的正常运行时间，以秒为单位。
 
-// os.type(): 返回操作系统类型，例如 "Linux", "Windows_NT" 等。
+
 
 // 这些是 os 模块中一些常用的 API，可以帮助您获取关于操作系统的各种信息。

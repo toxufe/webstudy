@@ -1,8 +1,8 @@
 const os = require("node:os");
 
 // Node.js 中的 os 模块提供了一些常用的 API，用于获取操作系统相关的信息。以下是一些常用的 os 模块的 API：
-
 // os.platform(): 返回操作系统平台，例如 "darwin", "win32", "linux" 等。
+console.log('os.platform(): ', os.platform());
 
 // os.arch(): 返回操作系统的体系结构，例如 "x64", "arm" 等。
 

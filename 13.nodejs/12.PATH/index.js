@@ -25,6 +25,9 @@ console.log(path.join('/a', 'b', 'c', 'd','../'));
 console.log(path.resolve("./index.js"));// 返回对当前工作目录的绝对路径
 console.log(path.resolve(__dirname,"./index.js"));
 
-// parse 把路径解析成对象  format 逆向操作
+// 6.parse 把路径解析成对象  format 逆向操作
 console.log(path.parse("/a/b/c/d.html"));
 console.log(path.format(path.parse("/a/b/c/d.html")));
+
+// 7.sep
+console.log(path.sep); // 路径分隔符

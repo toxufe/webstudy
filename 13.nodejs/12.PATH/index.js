@@ -21,4 +21,6 @@ console.log(path.extname("/a/a/ccc.b.b.b.aaa"));
 // 4.join 路径拼接 支持 ./ ../
 console.log(path.join('/a', 'b', 'c', 'd','../'));
 
-// 5.resolve
+// 5.resolve 解析路径 返回的是绝对路径
+console.log(path.resolve("./index.js"));// 返回对当前工作目录的绝对路径
+console.log(path.resolve(__dirname,"./index.js"));

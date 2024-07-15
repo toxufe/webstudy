@@ -8,6 +8,10 @@ console.log('os.platform(): ', os.platform());
 console.log('os.release(): ', os.release());
 // os.type(): 返回操作系统类型，例如 "Linux", "Windows_NT" 等。
 console.log('os.type(): ', os.type());
+
+// os.version(): 返回操作系统版本。
+console.log('os.version(): ', os.version());
+
 // os.arch(): 返回操作系统的体系结构，例如 "x64", "arm" 等。
 
 // os.cpus(): 返回一个包含有关系统 CPU 核心信息的对象数组。

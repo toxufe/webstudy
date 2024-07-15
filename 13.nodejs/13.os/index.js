@@ -4,6 +4,8 @@ const os = require("node:os");
 // os.platform(): 返回操作系统平台，例如 "darwin", "win32", "linux" 等。
 console.log('os.platform(): ', os.platform());
 
+// os.release() 是 os 模块提供的一个常用 API，用于获取操作系统的版本信息。
+console.log('os.release(): ', os.release());
 // os.arch(): 返回操作系统的体系结构，例如 "x64", "arm" 等。
 
 // os.cpus(): 返回一个包含有关系统 CPU 核心信息的对象数组。

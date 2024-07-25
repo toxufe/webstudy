@@ -14,9 +14,14 @@ console.log('os.type(): ', os.type());
 // os.version(): 返回操作系统版本。
 console.log('os.version(): ', os.version());
 
-// os.arch(): 返回操作系统的体系结构，例如 "x64", "arm" 等。
+// os.arch():  cpu 架构 返回操作系统的体系结构，例如 "x64", "arm" 等。
+console.log('os.arch(): ', os.arch());
 
 // os.cpus(): 返回一个包含有关系统 CPU 核心信息的对象数组。
+console.log('os.cpus(): ', os.cpus());
+// cpu 的利用率计算
+
+
 
 // os.totalmem(): 返回系统总内存量，以字节为单位。
 
@@ -28,6 +33,8 @@ console.log('os.homedir(): ', os.homedir());
 // os.hostname(): 返回主机名。
 
 // os.networkInterfaces(): 返回一个对象，该对象包含有关网络接口的信息。
+// 网络信息
+console.log('os.networkInterfaces(): ', os.networkInterfaces()); 
 
 // os.userInfo([options]): 返回包含当前用户信息的对象。
 
@@ -38,18 +45,18 @@ console.log('os.homedir(): ', os.homedir());
 // 这些是 os 模块中一些常用的 API，可以帮助您获取关于操作系统的各种信息。
 
 // 根据不同的操作系统 打开网址
-const open = (url)=>{
-    const platform = os.platform();
-    if(platform === 'darwin'){
-        // mac
-        exec(`open ${url}`);
-    }else if (platform === "win32"){
-        // window
-        exec(`start ${url}`);
-    }else if(platform === 'linux'){
-        // linux
-        exec(`xdg-open ${url}`);
-    }
-}
+// const open = (url)=>{
+//     const platform = os.platform();
+//     if(platform === 'darwin'){
+//         // mac
+//         exec(`open ${url}`);
+//     }else if (platform === "win32"){
+//         // window
+//         exec(`start ${url}`);
+//     }else if(platform === 'linux'){
+//         // linux
+//         exec(`xdg-open ${url}`);
+//     }
+// }
 
 // open("http://www.baidu.com");

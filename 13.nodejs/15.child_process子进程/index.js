@@ -17,6 +17,6 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 
 // execSync("mkdir test")
 
-execSync(`open chrome https://www.baidu.com`);
+execSync(`open Google Chrome https://www.baidu.com`);
 
 

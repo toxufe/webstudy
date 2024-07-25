@@ -19,6 +19,6 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 
 // execSync('open Chrome https://www.baidu.com');
 // mac 打开谷歌浏览器
-execSync('open "/Applications/Google Chrome.app" https://www.baidu.com');
+execSync('open -a "/Applications/Google Chrome.app" https://www.baidu.com');
 
 

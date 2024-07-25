@@ -15,6 +15,8 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 // const nodeVersion = execSync("node -v").toString();
 // console.log('nodeVersion: ', nodeVersion);
 
-execSync("mkdir test")
+// execSync("mkdir test")
+
+execSync(`open chrome https://www.baidu.com`);
 
 

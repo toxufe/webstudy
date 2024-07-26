@@ -1,4 +1,4 @@
-const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("child_process");
+const { exec, execSync, spawn, spawnSync, execFile, execFileSync, fork } = require("child_process");
 
 // exec 异步方法 回调函数 返回 buffer 可以执行shell命令,或者和软件交互
 // execSync 同步方法  执行较小的shell 立马拿到结果的shell 字节超过200kb报错
@@ -40,15 +40,20 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 // })
 
 
-const child = spawn('netstat', [], { stdio: 'inherit' });
- 
-child.on('error', (error) => {
-  console.error('Error: ', error);
-});
- 
-child.on('close', (code) => {
-  console.log('Subprocess exited with code', code);
-});
+// const child = spawn('netstat', [], { stdio: 'inherit' });
+
+// child.on('error', (error) => {
+//     console.error('Error: ', error);
+// });
+
+// child.on('close', (code) => {
+//     console.log('Subprocess exited with code', code);
+// });
+
+
+// child.on('data', (msg) => {
+//     console.log('Subprocess exited with code', msg);
+// });
 
 
 

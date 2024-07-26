@@ -58,8 +58,12 @@ const path = require("path");
 
 execFile(path.resolve(__dirname, './test.sh'), (error, stdout, stderr) => {
     console.log('stdout: ', stdout);
+    console.log('error: ', error);
 
 });
+
+// chmod +x ./test.sh #首次执行需要使脚本具有执行的权限
+// ./test.sh #执行脚本
 
 
 

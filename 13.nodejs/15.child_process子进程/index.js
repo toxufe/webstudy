@@ -70,17 +70,19 @@ const path = require("path");
 // 底层的实现顺序
 // exec -> execFile -> spwan
 
+
+// 底层是基于 ipc 通讯  IPC是基于libuv实现的  libuv是nodejs的核心库  实现了异步IO和事件驱动模型  基于事件驱动模型 实现了异步IO  基于libuv实现了IPC
 // fork 只能接受js模块 帮助js创建子进程
-const testProcess = fork("./test/test.js");
-// console.log('testProcess: ', testProcess);
+// const testProcess = fork("./test/test.js");
+// // console.log('testProcess: ', testProcess);
 
-testProcess.send("我是主进程发送的消息");
+// testProcess.send("我是主进程发送的消息");
 
-// nodejs  单线程 不适合做cpu密集型优秀
-// 耗时的代码使用子进程执行
+// // nodejs  单线程 不适合做cpu密集型优秀
+// // 耗时的代码使用子进程执行
 
-testProcess.on('message', (msg) => {
-    console.log('主进程收到消息：', msg);
-})
+// testProcess.on('message', (msg) => {
+//     console.log('主进程收到消息：', msg);
+// })
 
 

@@ -72,6 +72,8 @@ const path = require("path");
 
 // fork 只能接受js模块 帮助js创建子进程
 const testProcess = fork("./test/test.js");
-console.log('testProcess: ', testProcess);
+// console.log('testProcess: ', testProcess);
+
+testProcess.send("我是主进程发送的消息");
 
 

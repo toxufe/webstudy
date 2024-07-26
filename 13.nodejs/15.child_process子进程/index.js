@@ -29,4 +29,9 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 // const a = execSync('netstat');
 // console.log('a: ', a.toString());
 
+const { stdout } = spawn("netstat");
+stdout.on("data", (data) => {
+    console.log(data.toString());
+})
+
 

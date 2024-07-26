@@ -29,7 +29,8 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 // const a = execSync('netstat');
 // console.log('a: ', a.toString());
 
-const { stdout } = spawn("netstat",['-a'],{});// 第二歌参数是个数组 可以携带命令的参数 第三个参数是个对象 选项
+// spawn 没有实时输出 
+const { stdout } = spawnSync("netstat",['-a'],{});// 第二歌参数是个数组 可以携带命令的参数 第三个参数是个对象 选项
 stdout.on("data", (data) => {
     console.log(data.toString());
 })
@@ -37,6 +38,11 @@ stdout.on("data", (data) => {
 stdout.on("close", (data) => {
     console.log("结束了……");
 })
+
+
+
+
+
 
 
 

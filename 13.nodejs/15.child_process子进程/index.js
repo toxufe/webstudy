@@ -22,6 +22,7 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 // execSync('open -a "/Applications/Google Chrome.app" https://www.baidu.com');
 
 
-spawn
+// spawn 没有字节上线 返回的是一个流 实时返回的
+// spanSync 同步的方法用的比较少
 
 

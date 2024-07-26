@@ -34,4 +34,9 @@ stdout.on("data", (data) => {
     console.log(data.toString());
 })
 
+stdout.on("close", (data) => {
+    console.log("结束了……");
+})
+
+
 

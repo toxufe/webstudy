@@ -56,16 +56,22 @@ const path = require("path");
 //     console.log('Subprocess exited with code', msg);
 // });
 
-execFile(path.resolve(__dirname, './test.sh'), null,(error, stdout, stderr) => {
-    console.log('stdout: ', stdout);
-    console.log('error: ', error);
 
-});
+// execFile 执行 可执行文件
+// execFile(path.resolve(__dirname, './test.sh'), null,(error, stdout, stderr) => {
+//     console.log('stdout: ', stdout);
+//     console.log('error: ', error);
+
+// });
 
 // chmod +x ./test.sh #首次执行需要使脚本具有执行的权限
 // ./test.sh #执行脚本
 
+// 底层的实现顺序
+// exec -> execFile -> spwan
 
-
+// fork 只能接受js模块 帮助js创建子进程
+const testProcess = fork("./test/test.js");
+console.log('testProcess: ', testProcess);
 
 

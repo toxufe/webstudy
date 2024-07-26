@@ -56,7 +56,7 @@ const path = require("path");
 //     console.log('Subprocess exited with code', msg);
 // });
 
-execFile(path.resolve(__dirname, './test.sh'), (error, stdout, stderr) => {
+execFile(path.resolve(__dirname, './test.sh'), null,(error, stdout, stderr) => {
     console.log('stdout: ', stdout);
     console.log('error: ', error);
 

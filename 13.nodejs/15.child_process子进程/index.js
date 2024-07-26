@@ -24,7 +24,7 @@ const {exec,execSync,spawn,spawnSync,execFile,execFileSync,fork} = require("chil
 
 // spawn 没有字节上线 返回的是一个流 实时返回的
 // spanSync 同步的方法用的比较少
-const a = execSync('ps -ef');
+const a = execSync('netstat');
 console.log('a: ', a.toString());
 
 

@@ -76,4 +76,11 @@ const testProcess = fork("./test/test.js");
 
 testProcess.send("我是主进程发送的消息");
 
+// nodejs  单线程 不适合做cpu密集型优秀
+// 耗时的代码使用子进程执行
+
+testProcess.on('message', (msg) => {
+    console.log('主进程收到消息：', msg);
+})
+
 

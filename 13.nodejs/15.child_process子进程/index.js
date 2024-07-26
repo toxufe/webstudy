@@ -1,4 +1,5 @@
 const { exec, execSync, spawn, spawnSync, execFile, execFileSync, fork } = require("child_process");
+const path = require("path");
 
 // exec 异步方法 回调函数 返回 buffer 可以执行shell命令,或者和软件交互
 // execSync 同步方法  执行较小的shell 立马拿到结果的shell 字节超过200kb报错
@@ -55,7 +56,10 @@ const { exec, execSync, spawn, spawnSync, execFile, execFileSync, fork } = requi
 //     console.log('Subprocess exited with code', msg);
 // });
 
+execFile(path.resolve(__dirname, './test.sh'), (error, stdout, stderr) => {
+    console.log('stdout: ', stdout);
 
+});
 
 
 

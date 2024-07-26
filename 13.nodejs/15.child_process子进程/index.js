@@ -72,6 +72,8 @@ const path = require("path");
 
 
 // 底层是基于 ipc 通讯  IPC是基于libuv实现的  libuv是nodejs的核心库  实现了异步IO和事件驱动模型  基于事件驱动模型 实现了异步IO  基于libuv实现了IPC
+// 命名管道
+// window named pipe posix unix domain socket
 // fork 只能接受js模块 帮助js创建子进程
 // const testProcess = fork("./test/test.js");
 // // console.log('testProcess: ', testProcess);
